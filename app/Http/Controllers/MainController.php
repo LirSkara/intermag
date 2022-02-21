@@ -9,4 +9,7 @@ class MainController extends Controller
     public function home(){
         return view('welcome');
     }
+    public function product(){
+        return view('product');
+    }
 }
