@@ -16,7 +16,7 @@
                                     M75 Sport Watch
                                 </h2>
                                 <p>,Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
- так же низко</p>
+так же низко</p>
                                 <h3><span>Теперь Только</span> $320.99</h3>
                                 <div class="button">
                                     <a href="product-grids.html" class="btn">Купить сейчас</a>

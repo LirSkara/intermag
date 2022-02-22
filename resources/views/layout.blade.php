@@ -86,13 +86,12 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <div class="cart-items">
+                                <div class="cart-items me-2">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
                                     
-                                
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
@@ -140,6 +139,14 @@
                                     <!--/ End Shopping Item -->
                                     
                                 </div>
+                                <!--icon Избраное --> 
+                                    <div class="wishlist">
+                                    <a href="javascript:void(0)">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="total-items">0</span>
+                                    </a>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
