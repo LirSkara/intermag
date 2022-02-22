@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="ru">
 
 <head>
     <meta charset="utf-8" />
@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -85,14 +88,17 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <div class="cart-items">
+                                <div class="cart-items me-2">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
                                     
+<<<<<<< HEAD
                                     
                                 
+=======
+>>>>>>> a285f72ba14e06c5d95518fec1334e5ca52a52f7
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
@@ -141,6 +147,20 @@
                                     
                                     
                                 </div>
+                                <!--icon Избраное --> 
+                                <div class="wishlist">
+                                <div class="dropdown">
+                                <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-dark" href="#">Вход</a></li>
+                                    <li><a class="dropdown-item text-dark" href="#">Регистрация</a></li>
+                                </ul>
+                                </div>
+                                </div>  
+                                
+
                             </div>
                         </div>
                     </div>
@@ -472,6 +492,8 @@
             }
         });
     </script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
