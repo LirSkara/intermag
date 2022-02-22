@@ -93,12 +93,6 @@
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
-                                    
-<<<<<<< HEAD
-                                    
-                                
-=======
->>>>>>> a285f72ba14e06c5d95518fec1334e5ca52a52f7
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
