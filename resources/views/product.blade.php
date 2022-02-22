@@ -5,14 +5,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">Single Product</h1>
+                    <h1 class="page-title">Отдельный Продукт</h1>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <ul class="breadcrumb-nav">
-                    <li><a href="index.html"><i class="lni lni-home"></i> Home</a></li>
-                    <li><a href="index.html">Shop</a></li>
-                    <li>Single Product</li>
+                    <li><a href="index.html"><i class="lni lni-home"></i> Главная</a></li>
+                    <li><a href="index.html">Магазин</a></li>
+                    <li>Отдельный продукт</li>
                 </ul>
             </div>
         </div>
@@ -43,16 +43,15 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
                         <h2 class="title">GoPro Karma Camera Drone</h2>
-                        <p class="category"><i class="lni lni-tag"></i> Drones:<a href="javascript:void(0)">Action
-                                cameras</a></p>
+                        <p class="category"><i class="lni lni-tag"></i> Дроны:<a href="javascript:void(0)">Действие
+                                камеры</a></p>
                         <h3 class="price">$850<span>$945</span></h3>
-                        <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
+                        <p class="info-text"> Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod
+ со временем</p>
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group color-option">
-                                    <label class="title-label" for="size">Choose color</label>
+                                    <label class="title-label" for="size">Выбрать цвет</label>
                                     <div class="single-checkbox checkbox-style-1">
                                         <input type="checkbox" id="checkbox-1" checked="">
                                         <label for="checkbox-1"><span></span></label>
@@ -73,7 +72,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group">
-                                    <label for="color">Battery capacity</label>
+                                    <label for="color">Емкость аккумулятора</label>
                                     <select class="form-control" id="color">
                                         <option>5100 mAh</option>
                                         <option>6200 mAh</option>
@@ -83,7 +82,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group quantity">
-                                    <label for="color">Quantity</label>
+                                    <label for="color">Количество</label>
                                     <select class="form-control">
                                         <option>1</option>
                                         <option>2</option>
@@ -98,17 +97,17 @@
                             <div class="row align-items-end">
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="button cart-button">
-                                        <button class="btn" style="width: 100%;">Add to Cart</button>
+                                        <button class="btn" style="width: 100%;">Добавить в корзину</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-reload"></i> Compare</button>
+                                        <button class="btn"><i class="lni lni-reload"></i> Сравнивать</button>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="wish-button">
-                                        <button class="btn"><i class="lni lni-heart"></i> To Wishlist</button>
+                                        <button class="btn"><i class="lni lni-heart"></i> В Список желаний</button>
                                     </div>
                                 </div>
                             </div>
@@ -122,37 +121,37 @@
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="info-body custom-responsive-margin">
-                            <h4>Details</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                            <h4>Features</h4>
+                            <h4>Детали</h4>
+                            <p>Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
+ так же низко, как усталость и ожирение. Для получения дополнительной информации, пожалуйста, свяжитесь с нами
+ физические упражнения и физические упражнения, за исключением получения от них некоторой пользы. В фильме есть
+ вернуться в нужное русло не будет опубликован университетский факультет компьютерных наук.</p>
+                            <h4>Особенности</h4>
                             <ul class="features">
-                                <li>Capture 4K30 Video and 12MP Photos</li>
-                                <li>Game-Style Controller with Touchscreen</li>
-                                <li>View Live Camera Feed</li>
-                                <li>Full Control of HERO6 Black</li>
-                                <li>Use App for Dedicated Camera Operation</li>
+                                <li>Захватывайте видео 4K30 и фотографии 12MP</li>
+                                <li>Игровой контроллер с сенсорным экраном</li>
+                                <li>Просмотр Прямой Трансляции С Камеры</li>
+                                <li>Полный контроль над HERO6 Black</li>
+                                <li>Используйте приложение для работы с выделенной камерой</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 col-12">
                         <div class="info-body">
-                            <h4>Specifications</h4>
+                            <h4>Технические характеристики</h4>
                             <ul class="normal-list">
-                                <li><span>Weight:</span> 35.5oz (1006g)</li>
-                                <li><span>Maximum Speed:</span> 35 mph (15 m/s)</li>
-                                <li><span>Maximum Distance:</span> Up to 9,840ft (3,000m)</li>
-                                <li><span>Operating Frequency:</span> 2.4GHz</li>
-                                <li><span>Manufacturer:</span> GoPro, USA</li>
+                                <li><span>Ширина:</span> 35.5oz (1006g)</li>
+                                <li><span>Максимальная скорость:</span> 35 mph (15 m/s)</li>
+                                <li><span>Максимальное расстояние:</span> Up to 9,840ft (3,000m)</li>
+                                <li><span>Рабочая частота:</span> 2.4GHz</li>
+                                <li><span>Производитель:</span> GoPro, USA</li>
                             </ul>
                             <h4>Shipping Options:</h4>
                             <ul class="normal-list">
-                                <li><span>Courier:</span> 2 - 4 days, $22.50</li>
-                                <li><span>Local Shipping:</span> up to one week, $10.00</li>
-                                <li><span>UPS Ground Shipping:</span> 4 - 6 days, $18.00</li>
-                                <li><span>Unishop Global Export:</span> 3 - 4 days, $25.00</li>
+                                <li><span>Курьер:</span> 2 - 4 дней, $22.50</li>
+                                <li><span>Местная доставка:</span> до одной недели, $10.00</li>
+                                <li><span>Наземная доставка ИБП:</span> 4 - 6 дней, $18.00</li>
+                                <li><span>Unishop Global Export:</span> 3 - 4 дней, $25.00</li>
                             </ul>
                         </div>
                     </div>
