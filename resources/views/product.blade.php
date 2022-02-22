@@ -146,7 +146,7 @@
                                 <li><span>Рабочая частота:</span> 2.4GHz</li>
                                 <li><span>Производитель:</span> GoPro, USA</li>
                             </ul>
-                            <h4>Shipping Options:</h4>
+                            <h4>Варианты Доставки:</h4>
                             <ul class="normal-list">
                                 <li><span>Курьер:</span> 2 - 4 дней, $22.50</li>
                                 <li><span>Местная доставка:</span> до одной недели, $10.00</li>
