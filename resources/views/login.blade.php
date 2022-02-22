@@ -59,23 +59,15 @@
                   <form class="row g-3 needs-validation" novalidate action="/login" method="POST">
                     @csrf
 
-<<<<<<< HEAD
-                    {{-- <div class="col-12">
-                      <label for="yourEmailcome" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="email" name="email" class="form-control" id="yourEmailcome" required>
-                        <div class="invalid-feedback">Please enter your email.</div>
-=======
+
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Фамилия</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Пожалуйста, введите свое имя пользователя.</div>
->>>>>>> 0558d8cabd007480c8494eda1c830290c478343c
                       </div>
-                    </div> --}}
+                    </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your Email</label>

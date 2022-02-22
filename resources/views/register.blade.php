@@ -104,22 +104,16 @@
 
                     <div class="col-12">
                       <div class="form-check">
-<<<<<<< HEAD
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms">
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-=======
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
                         <label class="form-check-label" for="acceptTerms">Я согласен и принимаю <a href="#">условия и положения</a></label>
                         <div class="invalid-feedback">Вы должны согласиться перед отправкой.</div>
->>>>>>> 0558d8cabd007480c8494eda1c830290c478343c
                       </div>
                     </div>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Создать аккаунт</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">У вас уже есть учетная запись?<a href="/login">Авторизоваться</a></p>
+                      <p class="small mb-0">У вас уже есть учетная запись?<a href="/login"> Авторизоваться</a></p>
                     </div>
                   </form>
 
