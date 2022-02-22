@@ -12,14 +12,14 @@
                         <div class="single-slider"
                             style="background-image: url(assets/images/hero/slider-bg1.jpg);">
                             <div class="content">
-                                <h2><span>No restocking fee ($35 savings)</span>
+                                <h2><span>Отсутствие платы за пополнение запасов (экономия 35 долларов США)</span>
                                     M75 Sport Watch
                                 </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                                <h3><span>Now Only</span> $320.99</h3>
+                                <p>,Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
+ так же низко</p>
+                                <h3><span>Теперь Только</span> $320.99</h3>
                                 <div class="button">
-                                    <a href="product-grids.html" class="btn">Shop Now</a>
+                                    <a href="product-grids.html" class="btn">Купить сейчас</a>
                                 </div>
                             </div>
                         </div>
@@ -28,12 +28,12 @@
                         <div class="single-slider"
                             style="background-image: url(assets/images/hero/slider-bg2.jpg);">
                             <div class="content">
-                                <h2><span>Big Sale Offer</span>
-                                    Get the Best Deal on CCTV Camera
+                                <h2><span>Большое Предложение на Продажу</span>
+                                   Получите лучшее предложение по камере видеонаблюдения
                                 </h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
-                                <h3><span>Combo Only:</span> $590.00</h3>
+                                <p>Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
+ так же низко</p>
+                                <h3><span>Только Комбинированный:</span> $590.00</h3>
                                 <div class="button">
                                     <a href="product-grids.html" class="btn">Shop Now</a>
                                 </div>
@@ -52,7 +52,7 @@
                             style="background-image: url('assets/images/hero/slider-bnr.jpg');">
                             <div class="content">
                                 <h2>
-                                    <span>New line required</span>
+                                    <span>Требуется новая строка</span>
                                     iPhone 12 Pro Max
                                 </h2>
                                 <h3>$259.99</h3>
@@ -64,10 +64,10 @@
                         <!-- Start Small Banner -->
                         <div class="hero-small-banner style2">
                             <div class="content">
-                                <h2>Weekly Sale!</h2>
-                                <p>Saving up to 50% off all online store items this week.</p>
+                                <h2>Еженедельная распродажа!</h2>
+                                <p>Экономия до 50% на всех товарах интернет-магазина на этой неделе.</p>
                                 <div class="button">
-                                    <a class="btn" href="product-grids.html">Shop Now</a>
+                                    <a class="btn" href="product-grids.html">Купить сейчас</a>
                                 </div>
                             </div>
                         </div>
@@ -86,9 +86,9 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h2>Trending Product</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                        suffered alteration in some form.</p>
+                    <h2>Трендовый Продукт</h2>
+                    <p>Существует множество вариантов отрывков из Lorem Ipsum, но большинство
+из них претерпели изменения в той или иной форме.</p>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Watches</span>
+                        <span class="category">Часы</span>
                         <h4 class="title">
                             <a href="product-grids.html">Xiaomi Mi Band 5</a>
                         </h4>
@@ -113,7 +113,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
+                            <li><span>4.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$199.00</span>
@@ -129,13 +129,13 @@
                         <img src="assets/images/products/product-2.jpg" alt="#">
                         <span class="sale-tag">-25%</span>
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Speaker</span>
+                        <span class="category">Динамики</span>
                         <h4 class="title">
-                            <a href="product-grids.html">Big Power Sound Speaker</a>
+                            <a href="product-grids.html">Громкоговоритель Большой Мощности</a>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>
@@ -143,7 +143,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
+                            <li><span>5.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$275.00</span>
@@ -159,13 +159,13 @@
                     <div class="product-image">
                         <img src="assets/images/products/product-3.jpg" alt="#">
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i>Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Camera</span>
+                        <span class="category">Камера</span>
                         <h4 class="title">
-                            <a href="product-grids.html">WiFi Security Camera</a>
+                            <a href="product-grids.html">Камера безопасности Wi-Fi</a>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>
@@ -173,7 +173,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
+                            <li><span>5.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$399.00</span>
@@ -187,13 +187,13 @@
                 <div class="single-product">
                     <div class="product-image">
                         <img src="assets/images/products/product-4.jpg" alt="#">
-                        <span class="new-tag">New</span>
+                        <span class="new-tag">Новые</span>
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Phones</span>
+                        <span class="category">Телефоны</span>
                         <h4 class="title">
                             <a href="product-grids.html">iphone 6x plus</a>
                         </h4>
@@ -203,7 +203,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
+                            <li><span>5.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$400.00</span>
@@ -222,9 +222,9 @@
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Headphones</span>
+                        <span class="category">Наушники</span>
                         <h4 class="title">
-                            <a href="product-grids.html">Wireless Headphones</a>
+                            <a href="product-grids.html">Беспроводные Наушники</a>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>
@@ -232,7 +232,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
+                            <li><span>5.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$350.00</span>
@@ -247,13 +247,13 @@
                     <div class="product-image">
                         <img src="assets/images/products/product-6.jpg" alt="#">
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i>Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Speaker</span>
+                        <span class="category">Динамики</span>
                         <h4 class="title">
-                            <a href="product-grids.html">Mini Bluetooth Speaker</a>
+                            <a href="product-grids.html">Мини-динамик Bluetooth</a>
                         </h4>
                         <ul class="review">
                             <li><i class="lni lni-star-filled"></i></li>
@@ -261,7 +261,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
+                            <li><span>4.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$70.00</span>
@@ -277,11 +277,11 @@
                         <img src="assets/images/products/product-7.jpg" alt="#">
                         <span class="sale-tag">-50%</span>
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i>Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Headphones</span>
+                        <span class="category">Наушники</span>
                         <h4 class="title">
                             <a href="product-grids.html">PX7 Wireless Headphones</a>
                         </h4>
@@ -291,7 +291,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
+                            <li><span>4.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$100.00</span>
@@ -307,11 +307,11 @@
                     <div class="product-image">
                         <img src="assets/images/products/product-8.jpg" alt="#">
                         <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i>Добавить в корзину</a>
                         </div>
                     </div>
                     <div class="product-info">
-                        <span class="category">Laptop</span>
+                        <span class="category">Ноутбук</span>
                         <h4 class="title">
                             <a href="product-grids.html">Apple MacBook Air</a>
                         </h4>
@@ -321,7 +321,7 @@
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
                             <li><i class="lni lni-star-filled"></i></li>
-                            <li><span>5.0 Review(s)</span></li>
+                            <li><span>5.0 Обзор(ы)</span></li>
                         </ul>
                         <div class="price">
                             <span>$899.00</span>
@@ -342,12 +342,12 @@
             <div class="col-lg-8 offset-lg-2 col-12">
                 <div class="inner">
                     <div class="content">
-                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Currently You are using free<br>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">В настоящее время Вы используете бесплатный<br>
                             Lite version of ShopGrids</h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">Please, purchase full version of the template
-                            to get all pages,<br> features and commercial license.</p>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Пожалуйста, приобретите полную версию шаблона
+, чтобы получить все страницы,<br> функции и коммерческая лицензия.</p>
                         <div class="button wow fadeInUp" data-wow-delay=".8s">
-                            <a href="javascript:void(0)" class="btn">Purchase Now</a>
+                            <a href="javascript:void(0)" class="btn">Покупайте Сейчас</a>
                         </div>
                     </div>
                 </div>
@@ -364,10 +364,10 @@
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="single-banner" style="background-image:url('assets/images/banner/banner-1-bg.jpg')">
                     <div class="content">
-                        <h2>Smart Watch 2.0</h2>
-                        <p>Space Gray Aluminum Case with <br>Black/Volt Real Sport Band </p>
+                        <h2>Умные часы 2.0</h2>
+                        <p>Космический серый алюминиевый корпус с <br>Черная / Вольтовая Настоящая Спортивная лента </p>
                         <div class="button">
-                            <a href="product-grids.html" class="btn">View Details</a>
+                            <a href="product-grids.html" class="btn">Просмотр подробных сведений</a>
                         </div>
                     </div>
                 </div>
@@ -376,11 +376,11 @@
                 <div class="single-banner custom-responsive-margin"
                     style="background-image:url('assets/images/banner/banner-2-bg.jpg')">
                     <div class="content">
-                        <h2>Smart Headphone</h2>
-                        <p>Lorem ipsum dolor sit amet, <br>eiusmod tempor
-                            incididunt ut labore.</p>
+                        <h2>Умные наушники</h2>
+                        <p>Основные характеристики, <br>eiusmod темпор
+ так же мало, как и усилий.</p>
                         <div class="button">
-                            <a href="product-grids.html" class="btn">Shop Now</a>
+                            <a href="product-grids.html" class="btn">Купить сейчас</a>
                         </div>
                     </div>
                 </div>
@@ -400,8 +400,8 @@
                     <i class="lni lni-delivery"></i>
                 </div>
                 <div class="media-body">
-                    <h5>Free Shipping</h5>
-                    <span>On order over $99</span>
+                    <h5>бесплатная доставка</h5>
+                    <span>При заказе свыше 99 долларов</span>
                 </div>
             </li>
             <!-- Money Return -->
@@ -410,8 +410,8 @@
                     <i class="lni lni-support"></i>
                 </div>
                 <div class="media-body">
-                    <h5>24/7 Support.</h5>
-                    <span>Live Chat Or Call.</span>
+                    <h5>Поддержка 24/7.</h5>
+                    <span>Чат Или Звонок.</span>
                 </div>
             </li>
             <!-- Support 24/7 -->
@@ -420,8 +420,8 @@
                     <i class="lni lni-credit-cards"></i>
                 </div>
                 <div class="media-body">
-                    <h5>Online Payment.</h5>
-                    <span>Secure Payment Services.</span>
+                    <h5>Онлайн-оплата.</h5>
+                    <span>Безопасные Платежные Сервисы.</span>
                 </div>
             </li>
             <!-- Safe Payment -->
@@ -430,12 +430,13 @@
                     <i class="lni lni-reload"></i>
                 </div>
                 <div class="media-body">
-                    <h5>Easy Return.</h5>
-                    <span>Hassle Free Shopping.</span>
+                    <h5>Легкое Возвращение.</h5>
+                    <span>Беспроблемный Шопинг.</span>
                 </div>
             </li>
         </ul>
     </div>
 </section>
 <!-- End Shipping Info -->
+
 @endsection

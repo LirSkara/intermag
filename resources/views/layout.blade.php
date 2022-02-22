@@ -51,17 +51,17 @@
                                 <div class="search-select">
                                     <div class="select-position">
                                         <select id="select1">
-                                            <option selected>All</option>
-                                            <option value="1">option 01</option>
-                                            <option value="2">option 02</option>
-                                            <option value="3">option 03</option>
-                                            <option value="4">option 04</option>
-                                            <option value="5">option 05</option>
+                                            <option selected>Все</option>
+                                            <option value="1">Опция 01</option>
+                                            <option value="2">Опция 02</option>
+                                            <option value="3">Опция 03</option>
+                                            <option value="4">Опция 04</option>
+                                            <option value="5">Опция 05</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="search-input">
-                                    <input type="text" placeholder="Search">
+                                    <input type="text" placeholder="Поиск">
                                 </div>
                                 <div class="search-btn">
                                     <button><i class="lni lni-search-alt"></i></button>
@@ -75,7 +75,7 @@
                         <div class="middle-right-area">
                             <div class="nav-hotline">
                                 <i class="lni lni-phone"></i>
-                                <h3>Hotline:
+                                <h3>Горячая линия:
                                     <span>(+100) 123 456 7890</span>
                                 </h3>
                             </div>
@@ -91,6 +91,8 @@
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
+                                    
+                                
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
@@ -136,6 +138,7 @@
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -151,33 +154,33 @@
                     <div class="nav-inner">
                         <!-- Start Mega Category Menu -->
                         <div class="mega-category-menu">
-                            <span class="cat-button"><i class="lni lni-menu"></i>All Categories</span>
+                            <span class="cat-button"><i class="lni lni-menu"></i>Все категории</span>
                             <ul class="sub-category">
-                                <li><a href="product-grids.html">Electronics <i class="lni lni-chevron-right"></i></a>
+                                <li><a href="product-grids.html">Электроника <i class="lni lni-chevron-right"></i></a>
                                     <ul class="inner-sub-category">
-                                        <li><a href="product-grids.html">Digital Cameras</a></li>
-                                        <li><a href="product-grids.html">Camcorders</a></li>
-                                        <li><a href="product-grids.html">Camera Drones</a></li>
-                                        <li><a href="product-grids.html">Smart Watches</a></li>
-                                        <li><a href="product-grids.html">Headphones</a></li>
-                                        <li><a href="product-grids.html">MP3 Players</a></li>
-                                        <li><a href="product-grids.html">Microphones</a></li>
-                                        <li><a href="product-grids.html">Chargers</a></li>
-                                        <li><a href="product-grids.html">Batteries</a></li>
-                                        <li><a href="product-grids.html">Cables & Adapters</a></li>
+                                        <li><a href="product-grids.html">Цифровые камеры</a></li>
+                                        <li><a href="product-grids.html">Видеокамеры</a></li>
+                                        <li><a href="product-grids.html">Дроны с камерой</a></li>
+                                        <li><a href="product-grids.html">Умные часы</a></li>
+                                        <li><a href="product-grids.html">Наушники</a></li>
+                                        <li><a href="product-grids.html">MP3-Плееры</a></li>
+                                        <li><a href="product-grids.html">Микрофоны</a></li>
+                                        <li><a href="product-grids.html">Зарядные устройства</a></li>
+                                        <li><a href="product-grids.html">Батареи</a></li>
+                                        <li><a href="product-grids.html">Кабели и Адаптеры</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="product-grids.html">accessories</a></li>
-                                <li><a href="product-grids.html">Televisions</a></li>
-                                <li><a href="product-grids.html">best selling</a></li>
-                                <li><a href="product-grids.html">top 100 offer</a></li>
-                                <li><a href="product-grids.html">sunglass</a></li>
-                                <li><a href="product-grids.html">watch</a></li>
-                                <li><a href="product-grids.html">man’s product</a></li>
-                                <li><a href="product-grids.html">Home Audio & Theater</a></li>
-                                <li><a href="product-grids.html">Computers & Tablets </a></li>
-                                <li><a href="product-grids.html">Video Games </a></li>
-                                <li><a href="product-grids.html">Home Appliances </a></li>
+                                <li><a href="product-grids.html">Аксессуары</a></li>
+                                <li><a href="product-grids.html">Телевизоры</a></li>
+                                <li><a href="product-grids.html">Самые продаваемые</a></li>
+                                <li><a href="product-grids.html">Топ-100 предложений</a></li>
+                                <li><a href="product-grids.html">Солнцезащитные очки</a></li>
+                                <li><a href="product-grids.html">Часы</a></li>
+                                <li><a href="product-grids.html">Мужские продукты</a></li>
+                                <li><a href="product-grids.html">Домашнее Аудио и Кинотеатр</a></li>
+                                <li><a href="product-grids.html">Компьютеры и планшеты </a></li>
+                                <li><a href="product-grids.html">Видеоигры</a></li>
+                                <li><a href="product-grids.html">Бытовая Техника </a></li>
                             </ul>
                         </div>
                         <!-- End Mega Category Menu -->
@@ -193,47 +196,47 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.html" class="active" aria-label="Toggle navigation">Home</a>
+                                        <a href="index.html" class="active" aria-label="Toggle navigation">Главная</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Pages</a>
+                                            aria-expanded="false" aria-label="Toggle navigation">Страницы</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="about-us.html">About Us</a></li>
-                                            <li class="nav-item"><a href="faq.html">Faq</a></li>
-                                            <li class="nav-item"><a href="login.html">Login</a></li>
-                                            <li class="nav-item"><a href="register.html">Register</a></li>
-                                            <li class="nav-item"><a href="mail-success.html">Mail Success</a></li>
-                                            <li class="nav-item"><a href="404.html">404 Error</a></li>
+                                            <li class="nav-item"><a href="about-us.html">О нас</a></li>
+                                            <li class="nav-item"><a href="faq.html">Часто задаваемые вопросы</a></li>
+                                            <li class="nav-item"><a href="login.html">Логин</a></li>
+                                            <li class="nav-item"><a href="register.html">Регистрация</a></li>
+                                            <li class="nav-item"><a href="mail-success.html">Почта</a></li>
+                                            <li class="nav-item"><a href="404.html">404 Ошибка</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Shop</a>
+                                            aria-expanded="false" aria-label="Toggle navigation">Магазин</a>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
-                                            <li class="nav-item"><a href="product-grids.html">Shop Grid</a></li>
-                                            <li class="nav-item"><a href="product-list.html">Shop List</a></li>
-                                            <li class="nav-item"><a href="product-details.html">shop Single</a></li>
-                                            <li class="nav-item"><a href="cart.html">Cart</a></li>
-                                            <li class="nav-item"><a href="checkout.html">Checkout</a></li>
+                                            <li class="nav-item"><a href="product-grids.html">Сетка магазина</a></li>
+                                            <li class="nav-item"><a href="product-list.html">Список магазинов</a></li>
+                                            <li class="nav-item"><a href="product-details.html">Одиночный магазин</a></li>
+                                            <li class="nav-item"><a href="cart.html">Корзина</a></li>
+                                            <li class="nav-item"><a href="checkout.html">Проверка</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
                                             data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Blog</a>
+                                            aria-expanded="false" aria-label="Toggle navigation">Блог</a>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
-                                            <li class="nav-item"><a href="blog-grid-sidebar.html">Blog Grid Sidebar</a>
+                                            <li class="nav-item"><a href="blog-grid-sidebar.html"> Боковая панель сетки блога</a>
                                             </li>
-                                            <li class="nav-item"><a href="blog-single.html">Blog Single</a></li>
-                                            <li class="nav-item"><a href="blog-single-sidebar.html">Blog Single
+                                            <li class="nav-item"><a href="blog-single.html">Одиночный блог</a></li>
+                                            <li class="nav-item"><a href="blog-single-sidebar.html">Одиночный блог
                                                     Sibebar</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="contact.html" aria-label="Toggle navigation">Contact Us</a>
+                                        <a href="contact.html" aria-label="Toggle navigation"> Контакты</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -244,7 +247,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Nav Social -->
                     <div class="nav-social">
-                        <h5 class="title">Follow Us:</h5>
+                        <h5 class="title">Следуйте за нами:</h5>
                         <ul>
                             <li>
                                 <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
@@ -287,14 +290,14 @@
                         <div class="col-lg-9 col-md-8 col-12">
                             <div class="footer-newsletter">
                                 <h4 class="title">
-                                    Subscribe to our Newsletter
-                                    <span>Get all the latest information, Sales and Offers.</span>
+                                    Подпишитесь на нашу рассылку новостей
+                                    <span>Получайте всю самую свежую информацию, информацию о продажах и предложениях.</span>
                                 </h4>
                                 <div class="newsletter-form-head">
                                     <form action="#" method="get" target="_blank" class="newsletter-form">
                                         <input name="EMAIL" placeholder="Email address here..." type="email">
                                         <div class="button">
-                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
+                                            <button class="btn">Подписаться<span class="dir-part"></span></button>
                                         </div>
                                     </form>
                                 </div>
@@ -313,11 +316,11 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
-                                <h3>Get In Touch With Us</h3>
-                                <p class="phone">Phone: +1 (900) 33 169 7720</p>
+                                <h3>Свяжитесь С Нами</h3>
+                                <p class="phone">Телефон: +1 (900) 33 169 7720</p>
                                 <ul>
-                                    <li><span>Monday-Friday: </span> 9.00 am - 8.00 pm</li>
-                                    <li><span>Saturday: </span> 10.00 am - 6.00 pm</li>
+                                    <li><span>Понедельник-Пятница: </span> 9.00 am - 8.00 pm</li>
+                                    <li><span>Субботу: </span> 10.00 am - 6.00 pm</li>
                                 </ul>
                                 <p class="mail">
                                     <a href="mailto:support@shopgrids.com">support@shopgrids.com</a>
@@ -328,19 +331,19 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer our-app">
-                                <h3>Our Mobile App</h3>
+                                <h3>Наше Мобильное приложение</h3>
                                 <ul class="app-btn">
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="lni lni-apple"></i>
-                                            <span class="small-title">Download on the</span>
+                                            <span class="small-title">Скачать на</span>
                                             <span class="big-title">App Store</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="lni lni-play-store"></i>
-                                            <span class="small-title">Download on the</span>
+                                            <span class="small-title">Скачать на</span>
                                             <span class="big-title">Google Play</span>
                                         </a>
                                     </li>
@@ -351,13 +354,15 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Information</h3>
+                                <h3>Информация2
+                                
+                                </h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">About Us</a></li>
-                                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                                    <li><a href="javascript:void(0)">Downloads</a></li>
-                                    <li><a href="javascript:void(0)">Sitemap</a></li>
-                                    <li><a href="javascript:void(0)">FAQs Page</a></li>
+                                    <li><a href="javascript:void(0)">О нас</a></li>
+                                    <li><a href="javascript:void(0)">Контакты</a></li>
+                                    <li><a href="javascript:void(0)">Загрузки</a></li>
+                                    <li><a href="javascript:void(0)">Карта сайта</a></li>
+                                    <li><a href="javascript:void(0)">Страница часто задаваемых вопросов</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -365,13 +370,13 @@
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Shop Departments</h3>
+                                <h3>Цеховые отделы</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">Computers & Accessories</a></li>
-                                    <li><a href="javascript:void(0)">Smartphones & Tablets</a></li>
-                                    <li><a href="javascript:void(0)">TV, Video & Audio</a></li>
-                                    <li><a href="javascript:void(0)">Cameras, Photo & Video</a></li>
-                                    <li><a href="javascript:void(0)">Headphones</a></li>
+                                    <li><a href="javascript:void(0)">Компьютеры и аксессуары</a></li>
+                                    <li><a href="javascript:void(0)">Смартфоны и планшеты</a></li>
+                                    <li><a href="javascript:void(0)">Телевидение, Видео и Аудио</a></li>
+                                    <li><a href="javascript:void(0)">Камеры, Фото и Видео</a></li>
+                                    <li><a href="javascript:void(0)">Наушники</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -388,19 +393,19 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
-                                <span>We Accept:</span>
+                                <span>Мы Принимаем:</span>
                                 <img src="assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed</p>
+                                <p>Спроектированный и разработанный</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <ul class="socila">
                                 <li>
-                                    <span>Follow Us On:</span>
+                                    <span>Следуйте За Нами:</span>
                                 </li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
