@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="ru">
 
 <head>
     <meta charset="utf-8" />
@@ -8,13 +8,15 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -84,13 +86,17 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <div class="cart-items">
+                                <div class="cart-items me-2">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
                                     
+<<<<<<< HEAD
+                                    
                                 
+=======
+>>>>>>> a285f72ba14e06c5d95518fec1334e5ca52a52f7
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
@@ -137,7 +143,22 @@
                                     </div>
                                     <!--/ End Shopping Item -->
                                     
+                                    
                                 </div>
+                                <!--icon Избраное --> 
+                                <div class="wishlist">
+                                <div class="dropdown">
+                                <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-person-circle"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item text-dark" href="#">Вход</a></li>
+                                    <li><a class="dropdown-item text-dark" href="#">Регистрация</a></li>
+                                </ul>
+                                </div>
+                                </div>  
+                                
+
                             </div>
                         </div>
                     </div>
@@ -201,10 +222,10 @@
                                             data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Страницы</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="about-us.html">О нас</a></li>
-                                            <li class="nav-item"><a href="faq.html">Часто задаваемые вопросы</a></li>
-                                            <li class="nav-item"><a href="login.html">Логин</a></li>
-                                            <li class="nav-item"><a href="register.html">Регистрация</a></li>
+                                            <li class="nav-item"><a href="/about">О нас</a></li>
+                                            <li class="nav-item"><a href="/FAQ">Часто задаваемые вопросы</a></li>
+                                            <li class="nav-item"><a href="/login">Логин</a></li>
+                                            <li class="nav-item"><a href="/register">Регистрация</a></li>
                                             <li class="nav-item"><a href="mail-success.html">Почта</a></li>
                                             <li class="nav-item"><a href="404.html">404 Ошибка</a></li>
                                         </ul>
@@ -356,7 +377,7 @@
                                 
                                 </h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">О нас</a></li>
+                                    <li><a href="/about">О нас</a></li>
                                     <li><a href="javascript:void(0)">Контакты</a></li>
                                     <li><a href="javascript:void(0)">Загрузки</a></li>
                                     <li><a href="javascript:void(0)">Карта сайта</a></li>
@@ -469,6 +490,8 @@
             }
         });
     </script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
