@@ -91,6 +91,8 @@
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>
+                                    
+                                
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="dropdown-cart-header">
@@ -136,6 +138,7 @@
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
+                                    
                                 </div>
                             </div>
                         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -17,12 +18,14 @@ class AuthController extends Controller
     $data = $request->validate([
         'name' => ['required', 'string'],
         'email' => ['required', 'email', 'string', 'unique:users,email'],
+        // 'username' => ['required', 'email', 'string', 'unique:users,email'],
         'password' => ['required']
     ]);
 
     $user = User::create([
         'name' => $data['name'],
         'email' => $data['email'],
+        // 'username' => $data['username'],
         'password' => bcrypt($data['password']),
     ]);
 
