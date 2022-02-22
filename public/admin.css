@@ -1,0 +1,10 @@
+/* Начало карусели */
+.btn-carousel {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity)) !important;
+    color: white;
+}
+.btn-carousel:hover {
+    color: white;
+}
+/* Конец карусели */
