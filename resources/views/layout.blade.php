@@ -8,7 +8,6 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
-
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
@@ -92,6 +91,7 @@
                                         <span class="total-items">2</span>
                                     </a>
                                     
+                                    
                                 
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
@@ -138,6 +138,7 @@
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
+                                    
                                     
                                 </div>
                             </div>
@@ -203,10 +204,10 @@
                                             data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
                                             aria-expanded="false" aria-label="Toggle navigation">Страницы</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
-                                            <li class="nav-item"><a href="about-us.html">О нас</a></li>
-                                            <li class="nav-item"><a href="faq.html">Часто задаваемые вопросы</a></li>
-                                            <li class="nav-item"><a href="login.html">Логин</a></li>
-                                            <li class="nav-item"><a href="register.html">Регистрация</a></li>
+                                            <li class="nav-item"><a href="/about">О нас</a></li>
+                                            <li class="nav-item"><a href="/FAQ">Часто задаваемые вопросы</a></li>
+                                            <li class="nav-item"><a href="/login">Логин</a></li>
+                                            <li class="nav-item"><a href="/register">Регистрация</a></li>
                                             <li class="nav-item"><a href="mail-success.html">Почта</a></li>
                                             <li class="nav-item"><a href="404.html">404 Ошибка</a></li>
                                         </ul>
@@ -358,7 +359,7 @@
                                 
                                 </h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)">О нас</a></li>
+                                    <li><a href="/about">О нас</a></li>
                                     <li><a href="javascript:void(0)">Контакты</a></li>
                                     <li><a href="javascript:void(0)">Загрузки</a></li>
                                     <li><a href="javascript:void(0)">Карта сайта</a></li>

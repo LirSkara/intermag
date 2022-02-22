@@ -20,3 +20,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [AuthController::class, 'register']);
     Route::post('/register', [AuthController::class, 'register_process']);
 });
+
+Route::get('/about', [MainController::class, 'about']);
+Route::get('/FAQ', [MainController::class, 'FAQ']);
