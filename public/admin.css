@@ -4,7 +4,38 @@
     background-color: rgba(var(--bs-primary-rgb),var(--bs-bg-opacity)) !important;
     color: white;
 }
+
 .btn-carousel:hover {
     color: white;
+}
+
+.carousel-name {
+    font-size: 30px;
+    font-weight: 800;
+    color: #081828;
+}
+
+.carousel-details {
+    margin: 0;
+    margin-top: 0px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #888;
+}
+
+.text-price {
+    color: #888;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.price {
+    color: black;
+    font-size: 27px;
+    font-weight: 700;
 }
 /* Конец карусели */
