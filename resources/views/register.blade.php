@@ -63,7 +63,8 @@
                     <p class="text-center small">Введите свои личные данные для создания учетной записи</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" novalidate method="POST" action="/register">
+                    @csrf
                     <div class="col-12">
                       <label for="yourName" class="form-label">Ваше имя</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -87,6 +88,7 @@
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Пароль</label>
+
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Пожалуйста, введите свой пароль!</div>
                     </div>
