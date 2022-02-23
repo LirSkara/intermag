@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/home', [MainController::class, 'home'])->name('home');
 Route::get('/product', [MainController::class, 'product']);
 
 Route::get('/admin_home', [AdminController::class, 'admin_home']);
