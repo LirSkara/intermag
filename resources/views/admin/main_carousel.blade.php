@@ -21,80 +21,27 @@
     <section class="section dashboard mt-2">
         <div class="row">
 
-            <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card pb-0">
+            @foreach($main_carousel as $carousel)
+                <div class="col-xxl-4 col-md-6">
+                    <div class="card info-card sales-card pb-0">
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
+                        <div class="filter">
+                        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
+                            <li><a class="dropdown-item" href="#">Редактировать</a></li>
+                            <li><a class="dropdown-item" href="/delete_carousel/{{$carousel->id}}">Удалить</a></li>
+                        </ul>
+                        </div>
 
-                <div class="card-body">
-                  <h2 class="carousel-name mt-2">M75 Sport Watch</h2>    
-                  <div style="background-image: url(assets/images/hero/slider-bg1.jpg); background-size: cover; height: 200px"></div>
-                </div>
+                        <div class="card-body">
+                        <h2 class="carousel-name mt-2 text-truncate w-75">{{$carousel->name_cart}}</h2>    
+                        <div style="background-image: url(storage/carousel/{{$carousel->foto}}); background-size: cover; height: 200px"></div>
+                        </div>
 
-              </div>
-            </div><!-- End Sales Card -->
-
-          <!-- Sales Card -->
-          <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card pb-0">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h2 class="carousel-name mt-2">M75 Sport Watch</h2>    
-                  <div style="background-image: url(assets/images/hero/slider-bg2.jpg); background-size: cover; height: 200px"></div>
-                </div>
-
-              </div>
-            </div><!-- End Sales Card -->
-
-           <!-- Sales Card -->
-           <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card pb-0">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body">
-                  <h2 class="carousel-name mt-2">M75 Sport Watch</h2>    
-                  <div style="background-image: url(assets/images/hero/slider-bg1.jpg); background-size: cover; height: 200px"></div>
-                </div>
-
-              </div>
-            </div><!-- End Sales Card -->
+                    </div>
+                </div><!-- End Sales Card -->
+            @endforeach
             
         </div><!-- End Left side columns -->
     </section>
@@ -111,36 +58,54 @@
         <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="#">
-
+        <form action="/add_carousel" method="POST" enctype="multipart/form-data">
+        @csrf
             <div>
                 <label>Выберите фото</label>
-                <input type="file" class="form-control mt-1">
+                <input type="file" name="foto" class="form-control mt-1">
+                @if($errors->has('foto'))
+                    {{$errors->first('foto')}}
+                @endif
             </div>
 
             <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="name_cart" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Название карточки</label>
+                @if($errors->has('name_cart'))
+                    {{$errors->first('name_cart')}}
+                @endif
             </div>
 
             <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="first_text" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Первый текст</label>
+                @if($errors->has('first_text'))
+                    {{$errors->first('first_text')}}
+                @endif
             </div>
 
             <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="description" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Описание</label>
+                @if($errors->has('description'))
+                    {{$errors->first('description')}}
+                @endif
             </div>
 
             <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="text_price" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Текст цены</label>
+                @if($errors->has('text_price'))
+                    {{$errors->first('text_price')}}
+                @endif
             </div>
 
             <div class="form-floating mt-2">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input type="text" name="price" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Цена</label>
+                @if($errors->has('price'))
+                    {{$errors->first('price')}}
+                @endif
             </div>
 
             <button class="btn btn-lg btn-carousel mt-2 w-100">Добавить</button>
