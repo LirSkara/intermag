@@ -311,7 +311,7 @@
           </li>
           <li>
             <a href="/main_carousel">
-              <i class="bi bi-circle"></i><span>Carousel</span>
+              <i class="bi bi-circle"></i><span>Карусель</span>
             </a>
           </li>
           <li>
