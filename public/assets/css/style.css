@@ -223,11 +223,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: #012970;
-  font-family: "Poppins", sans-serif;
+  padding: 20px 0 0px 0;
+  font-size: 17px;
+  font-weight: 600;
+  display: block;
+  color: #8a8a8a;
 }
 .card-title span {
   color: #899bbd;

@@ -8,7 +8,10 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/product', [MainController::class, 'product']);
 
-Route::get('/admin_panel', [AdminController::class, 'admin_panel']);
+Route::get('/admin_home', [AdminController::class, 'admin_home']);
+Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('main_carousel');
+Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
+Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);
