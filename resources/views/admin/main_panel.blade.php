@@ -289,8 +289,8 @@
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
-              <i class="bi bi-circle"></i><span>Badges</span>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Часто задаваемые вопросы</span>
             </a>
           </li>
           <li>
@@ -453,7 +453,7 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
+        <a class="nav-link collapsed" href="/FAQ">
           <i class="bi bi-question-circle"></i>
           <span>F.A.Q</span>
         </a>
