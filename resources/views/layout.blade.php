@@ -88,7 +88,7 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <div class="cart-items me-2">
+                                <div style="margin-right: 12px" class="cart-items">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
