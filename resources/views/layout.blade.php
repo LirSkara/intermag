@@ -30,8 +30,6 @@
             </div>
         </div>
     </div>
-    <!-- /End Preloader -->
-
     <!-- Start Header Area -->
     <header class="header navbar-area">
         <!-- Start Header Middle -->
