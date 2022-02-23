@@ -31,14 +31,13 @@
           <div class="icon-box" data-aos="fade-up">
             <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <div class="alert alert-primary" role="alert">
-                <h4 class="title"><a href="">входим в ТОП-100
-в рейтинге интернет-площадок
-DataInsight</a></h4>
+                <h4 class="title">входим в ТОП-100
+в рейтинге интернет-площадок</h4>
               </div>
            
               <div class="alert alert-info" role="alert">
                 <h4 class="description">В ТОПе поисковой выдачи
-товары продавцов Tiu.ru</h4>
+товары продавцов</h4>
               </div>
            
           </div>
@@ -46,7 +45,7 @@ DataInsight</a></h4>
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bx bx-gift"></i></div>
               <div class="alert alert-primary" role="alert">
-                <h4 class="title"><a href="">Индивидуальный подход</a></h4>
+                <h4 class="title">Индивидуальный подход</h4>
               </div>
            
               <div class="alert alert-info" role="alert">
