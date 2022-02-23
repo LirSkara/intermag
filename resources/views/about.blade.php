@@ -22,8 +22,7 @@
             </div>
            
             <div class="alert alert-info" role="alert">
-              <h4>18 миллионов
-посетителей — каждый месяц</h4>
+              <h4>18 миллионов посетителей — каждый месяц</h4>
             </div>
            
           </div>
@@ -31,14 +30,10 @@
           <div class="icon-box" data-aos="fade-up">
             <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <div class="alert alert-primary" role="alert">
-                <h4 class="title"><a href="">входим в ТОП-100
-в рейтинге интернет-площадок
-DataInsight</a></h4>
+                <h4 class="title"><a href="">входим в ТОП-100 в рейтинге интернет-площадок DataInsight</a></h4>
               </div>
-           
               <div class="alert alert-info" role="alert">
-                <h4 class="description">В ТОПе поисковой выдачи
-товары продавцов Tiu.ru</h4>
+                <h4 class="description">В ТОПе поисковой выдачи товары продавцов Tiu.ru</h4>
               </div>
            
           </div>
