@@ -55,7 +55,7 @@
                     <h5 class="card-title text-center pb-0 fs-4">Войдите в Свою учетную запись</h5>
                     <p class="text-center small">Введите свое имя пользователя и пароль для входа в систему</p>
                   </div>
-
+                  
                   <form class="row g-3 needs-validation" novalidate action="/login" method="POST">
                     @csrf
 

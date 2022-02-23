@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
     <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
@@ -86,7 +86,7 @@
                                         <span class="total-items">0</span>
                                     </a>
                                 </div>
-                                <div class="cart-items me-2">
+                                <div style="margin-right: 12px" class="cart-items">
                                     <a href="javascript:void(0)" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
@@ -141,15 +141,21 @@
                                 </div>
                                 <!--icon Избраное --> 
                                 <div class="wishlist">
-                                <div class="dropdown">
-                                <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-person-circle"></i>
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item text-dark" href="#">Вход</a></li>
-                                    <li><a class="dropdown-item text-dark" href="#">Регистрация</a></li>
-                                </ul>
-                                </div>
+                                    <div class="dropdown">
+                                        <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-person-circle"></i>
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            @if (auth()->check())
+                                            <li><a class="dropdown-item text-dark fs-6" href="/exit">Выход из Аккаунта</a></li>
+                                            <li><a class="dropdown-item text-dark fs-6" href="/admin_home">Панель управления</a></li>
+
+                                            @else
+                                            <li><a class="dropdown-item text-dark fs-6" href="#">Вход</a></li>
+                                            <li><a class="dropdown-item text-dark fs-6" href="#">Регистрация</a></li>
+                                            @endif
+                                        </ul>
+                                    </div>
                                 </div>  
                                 
 
@@ -209,7 +215,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ms-auto">
                                     <li class="nav-item">
-                                        <a href="index.html" class="active" aria-label="Toggle navigation">Главная</a>
+                                        <a href="/" class="active" aria-label="Toggle navigation">Главная</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
@@ -353,11 +359,11 @@
                                             <span class="big-title">App Store</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="text-decoration-none">
                                         <a href="javascript:void(0)">
                                             <i class="lni lni-play-store"></i>
-                                            <span class="small-title">Скачать на</span>
-                                            <span class="big-title">Google Play</span>
+                                            <span class="small-title text-decoration-none">Скачать на</span>
+                                            <span class="big-title text-decoration-none">Google Play</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -366,9 +372,8 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-12">
                             <!-- Single Widget -->
-                            <div class="single-footer f-link">
-                                <h3>Информация2
-                                
+                            <div class="single-footer f-link d-flex flex-column">
+                                <h3>Информация
                                 </h3>
                                 <ul>
                                     <li><a href="/about">О нас</a></li>
