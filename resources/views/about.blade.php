@@ -18,11 +18,12 @@
             </div><br> <hr>
 
             <div class="alert alert-primary" role="alert">
-              <h3>Приглашаем Вас в наш гостевой дом «LOFT».</h3>
+              <h3>Одна из крупнейших торговых площадок в России</h3>
             </div>
            
             <div class="alert alert-info" role="alert">
-              <p>Современный гостевой дом "LOFT" является отличным выбором для любителей искусства, дизайна и технологий.</p>
+              <h4>18 миллионов
+посетителей — каждый месяц</h4>
             </div>
            
           </div>
@@ -30,11 +31,13 @@
           <div class="icon-box" data-aos="fade-up">
             <div class="icon"><i class="bx bx-fingerprint"></i></div>
               <div class="alert alert-primary" role="alert">
-                <h4 class="title"><a href="">Интерьер</a></h4>
+                <h4 class="title">входим в ТОП-100
+в рейтинге интернет-площадок</h4>
               </div>
            
               <div class="alert alert-info" role="alert">
-                <p class="description">Элегантный интерьер и полный комфорт создают идеальную атмосферу для отдыха после многочисленных экскурсий.</p>
+                <h4 class="description">В ТОПе поисковой выдачи
+товары продавцов</h4>
               </div>
            
           </div>
@@ -42,11 +45,11 @@
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bx bx-gift"></i></div>
               <div class="alert alert-primary" role="alert">
-                <h4 class="title"><a href="">Индивидуальный подход</a></h4>
+                <h4 class="title">Индивидуальный подход</h4>
               </div>
            
               <div class="alert alert-info" role="alert">
-                <p class="description">Индивидуальный подход к запросам гостей является одной из наших сильных сторон: от момента бронирования до благополучного возвращения домой.</p>
+                <h4 class="description">560 тысяч россиян ежедневно выбирают нас.</h4>
               </div>
             
           </div>
