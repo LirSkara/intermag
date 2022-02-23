@@ -11,6 +11,7 @@ Route::get('/product', [MainController::class, 'product']);
 Route::get('/admin_home', [AdminController::class, 'admin_home']);
 Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('main_carousel');
 Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
+Route::post('/exit_carousel/{id}', [AdminController::class, 'exit_carousel']);
 Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
 
 Route::middleware('auth')->group(function () {
