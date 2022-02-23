@@ -8,38 +8,21 @@
                 <div class="slider-head">
                     <!-- Start Hero Slider -->
                     <div class="hero-slider">
-                        <!-- Start Single Slider -->
-                        <div class="single-slider"
-                            style="background-image: url(assets/images/hero/slider-bg1.jpg);">
-                            <div class="content">
-                                <h2><span>Отсутствие платы за пополнение запасов (экономия 35 долларов США)</span>
-                                    M75 Sport Watch
-                                </h2>
-                                <p>,Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
-так же низко</p>
-                                <h3><span>Теперь Только</span> $320.99</h3>
-                                <div class="button">
-                                    <a href="product-grids.html" class="btn">Купить сейчас</a>
+                        @foreach($main_carousel as $carousel)
+                            <div class="single-slider"
+                                style="background-image: url(storage/carousel/{{$carousel->foto}});">
+                                <div class="content">
+                                    <h2><span>{{$carousel->first_text}}</span>
+                                        {{$carousel->name_cart}}
+                                    </h2>
+                                    <p>{{$carousel->description}}</p>
+                                    <h3><span>{{$carousel->text_price}}</span> {{$carousel->price}}</h3>
+                                    <div class="button">
+                                        <a href="product-grids.html" class="btn">Купить сейчас</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End Single Slider -->
-                        <!-- Start Single Slider -->
-                        <div class="single-slider"
-                            style="background-image: url(assets/images/hero/slider-bg2.jpg);">
-                            <div class="content">
-                                <h2><span>Большое Предложение на Продажу</span>
-                                   Получите лучшее предложение по камере видеонаблюдения
-                                </h2>
-                                <p>Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod tempor
- так же низко</p>
-                                <h3><span>Только Комбинированный:</span> $590.00</h3>
-                                <div class="button">
-                                    <a href="product-grids.html" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Slider -->
+                        @endforeach
                     </div>
                     <!-- End Hero Slider -->
                 </div>
