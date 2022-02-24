@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8ffc9dccbeb2bd68a36afe584482d6362883e397
 @extends('admin.admin_layout')
 @section('admin_main')
 <main id="main" class="main">

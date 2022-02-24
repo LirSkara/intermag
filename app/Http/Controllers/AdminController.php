@@ -45,6 +45,39 @@ class AdminController extends Controller
         return redirect()->route('main_carousel');
     }
 
+    public function exit_carousel(Request $data, $id){
+        $valid = $data->validate([
+            'foto' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'name_cart' => ['required'],
+            'first_text' => ['required'],
+            'description' => ['required'],
+            'text_price' => ['required'],
+            'price' => ['required']
+        ]); 
+        
+        $carousel = MainCarousel::find($id);
+        if($data->file('foto') != '') {
+            $upload_folder = 'public/carousel/'; //Создается автоматически
+            $file = $data->file('foto');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $carousel->foto);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $carousel->foto = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $carousel->foto = $carousel->foto;
+        }
+        
+        $carousel->name_cart = $data->input('name_cart');
+        $carousel->first_text = $data->input('first_text');
+        $carousel->description = $data->input('description');
+        $carousel->text_price = $data->input('text_price');
+        $carousel->price = $data->input('price');
+        $carousel->save();
+
+        return redirect()->route('main_carousel');
+    }
+
     public function delete_carousel($id){
         MainCarousel::find($id)->delete();
         return redirect()->route('main_carousel');

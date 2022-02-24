@@ -12,12 +12,15 @@ class MainController extends Controller
         $main_carousel = new MainCarousel;
         return view('welcome', ['main_carousel' => $main_carousel->all()]);
     }
+
     public function product(){
         return view('product');
     }
+
     public function about(){
         return view('about');
     }
+    
     public function FAQ(){
         return view('FAQ');
     }
