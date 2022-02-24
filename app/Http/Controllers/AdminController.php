@@ -49,4 +49,8 @@ class AdminController extends Controller
         MainCarousel::find($id)->delete();
         return redirect()->route('main_carousel');
     }
+    public function main_faq()
+    {
+        return view('main_faq');
+    }
 }

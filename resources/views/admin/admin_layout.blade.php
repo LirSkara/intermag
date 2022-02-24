@@ -340,8 +340,9 @@
             </a>
           </li>
           <li>
-            <a href="components-spinners.html">
-              <i class="bi bi-circle"></i><span>Spinners</span>
+            <a href="/main_faq">
+              <i class="bi bi-circle"></i><span>Часто
+               задаваемые вопросы</span>
             </a>
           </li>
           <li>
