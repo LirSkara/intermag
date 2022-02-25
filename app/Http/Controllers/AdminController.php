@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainCarousel;
+use App\Models\MainFaq;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -84,6 +85,7 @@ class AdminController extends Controller
     }
     public function main_faq()
     {
-        return view('main_faq');
+        $main_faq = new MainFaq;
+        return view('admin.main_faq', ['main_faq' => $main_carousel->all()]);
     }
 }
