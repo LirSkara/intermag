@@ -139,6 +139,21 @@
                                     
                                     
                                 </div>
+                                <div style="margin-right: 12px" class="cart-items">
+                                    <a href="javascript:void(0)" class="main-btn">
+                                        <i class="bi bi-person-circle"></i>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="d-flex flex-column">
+                                            <a href="#" class="text-dark mb-2 fs-6">Вход</a>
+                                            <a href="#" class="text-dark fs-6">Регистрация</a>
+                                        </div>
+                                    </div>
+                                    <!--/ End Shopping Item -->
+                                    
+                                </div>
+                                
                                 <!--icon Избраное --> 
                                 <div class="wishlist">
                                     <div class="dropdown">
