@@ -154,25 +154,6 @@
                                     
                                 </div>
                                 
-                                <!--icon Избраное --> 
-                                <div class="wishlist">
-                                    <div class="dropdown">
-                                        <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-person-circle"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            @if (auth()->check())
-                                            <li><a class="dropdown-item text-dark fs-6" href="/exit">Выход из Аккаунта</a></li>
-                                            <li><a class="dropdown-item text-dark fs-6" href="/admin_home">Панель управления</a></li>
-
-                                            @else
-                                            <li><a class="dropdown-item text-dark fs-6" href="#">Вход</a></li>
-                                            <li><a class="dropdown-item text-dark fs-6" href="#">Регистрация</a></li>
-                                            @endif
-                                        </ul>
-                                    </div>
-                                </div>  
-                                
 
                             </div>
                         </div>
