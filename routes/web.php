@@ -28,3 +28,4 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/about', [MainController::class, 'about']);
 Route::get('/FAQ', [MainController::class, 'FAQ']);
+Route::get('/banner_servis', [AdminController::class, 'banner_servis']);

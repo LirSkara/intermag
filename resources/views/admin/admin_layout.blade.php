@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="admin.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -335,8 +336,8 @@
             </a>
           </li>
           <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>Progress</span>
+            <a href="/banner_servis">
+              <i class="bi bi-circle"></i><span>Доп услуги</span>
             </a>
           </li>
           <li>

@@ -82,4 +82,8 @@ class AdminController extends Controller
         MainCarousel::find($id)->delete();
         return redirect()->route('main_carousel');
     }
+    public function banner_servis(){
+        return view ('admin.banner_servis');
+    }
+    
 }
