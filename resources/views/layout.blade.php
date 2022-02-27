@@ -306,19 +306,19 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-8 col-12">
+                        <div class="col-lg-9 col-md-8 col-12 text-start">
                             <div class="footer-newsletter">
                                 <h4 class="title">
                                     Подпишитесь на нашу рассылку новостей
                                     <span>Получайте всю самую свежую информацию, информацию о продажах и предложениях.</span>
                                 </h4>
                                 <div class="newsletter-form-head">
-                                    <form action="#" method="get" target="_blank" class="newsletter-form">
-                                        <input name="EMAIL" placeholder="Email address here..." type="email">
-                                        <div class="button">
-                                            <button class="btn">Подписаться<span class="dir-part"></span></button>
-                                        </div>
-                                    </form>
+                                        <form action="#" method="get" target="_blank" class="newsletter-form mt-3">
+                                            <input name="EMAIL" placeholder="Введите Email" type="email">
+                                            <div class="button">
+                                                <button class="btn">Подписаться<span class="dir-part"></span></button>
+                                            </div>
+                                        </form>
                                 </div>
                             </div>
                         </div>
@@ -411,19 +411,19 @@
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
-                                <span>Мы Принимаем:</span>
+                                <span>Способ оплаты:</span>
                                 <img src="assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Спроектированный и разработанный</p>
+                                <p>Compani Colibry</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
                             <ul class="socila">
                                 <li>
-                                    <span>Следуйте За Нами:</span>
+                                    <span>Мы в соц.сетях:</span>
                                 </li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
