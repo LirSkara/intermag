@@ -139,24 +139,20 @@
                                     
                                     
                                 </div>
-                                <!--icon Избраное --> 
-                                <div class="wishlist">
-                                    <div class="dropdown">
-                                        <a class="main-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="bi bi-person-circle"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            @if (auth()->check())
-                                            <li><a class="dropdown-item text-dark fs-6" href="/exit">Выход из Аккаунта</a></li>
-                                            <li><a class="dropdown-item text-dark fs-6" href="/admin_home">Панель управления</a></li>
-
-                                            @else
-                                            <li><a class="dropdown-item text-dark fs-6" href="#">Вход</a></li>
-                                            <li><a class="dropdown-item text-dark fs-6" href="#">Регистрация</a></li>
-                                            @endif
-                                        </ul>
+                                <div style="margin-right: 12px" class="cart-items">
+                                    <a href="javascript:void(0)" class="main-btn">
+                                        <i class="bi bi-person-circle"></i>
+                                    </a>
+                                    <!-- Shopping Item -->
+                                    <div class="shopping-item">
+                                        <div class="d-flex flex-column">
+                                            <a href="#" class="text-dark mb-2 fs-6">Вход</a>
+                                            <a href="#" class="text-dark fs-6">Регистрация</a>
+                                        </div>
                                     </div>
-                                </div>  
+                                    <!--/ End Shopping Item -->
+                                    
+                                </div>
                                 
 
                             </div>
