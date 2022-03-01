@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainCarousel;
+use App\Models\MainFaq;
 
 use Illuminate\Http\Request;
 
@@ -12,7 +13,10 @@ class MainController extends Controller
         $main_carousel = new MainCarousel;
         return view('welcome', ['main_carousel' => $main_carousel->all()]);
     }
-
+    public function faq(){
+        $main_faq = new MainFaq;
+        return view('faq', ['main_faq' => $main_faq->all()]);
+    }
     public function product(){
         return view('product');
     }
@@ -21,7 +25,5 @@ class MainController extends Controller
         return view('about');
     }
     
-    public function FAQ(){
-        return view('FAQ');
-    }
+
 }

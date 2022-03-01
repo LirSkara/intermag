@@ -14,7 +14,8 @@ Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('m
 Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
 Route::post('/exit_carousel/{id}', [AdminController::class, 'exit_carousel']);
 Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
-Route::get('/main_faq', [AdminController::class, 'main_faq']);
+Route::get('/main_faq', [AdminController::class, 'main_faq'])->name('main_faq');
+Route::post('/add_faq', [AdminController::class, 'add_faq']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);
@@ -28,4 +29,3 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::get('/about', [MainController::class, 'about']);
-Route::get('/FAQ', [MainController::class, 'FAQ']);
