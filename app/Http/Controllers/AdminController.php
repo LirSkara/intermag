@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainCarousel;
+use App\Models\CategoryModel;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -11,6 +12,44 @@ class AdminController extends Controller
 {
     public function admin_home(){
         return view('admin.admin_home');
+    }
+
+    public function category(){
+
+        $reviews = new CategoryModel();
+        return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get()]);
+    }
+
+    public function category_process(Request $data){
+
+        $valid = $data->validate([
+        'name' => ['required', 'min:5', 'max:15', 'string']
+         ]);
+
+        $review = new CategoryModel();
+        $review->name = $data->input('name');
+        $review->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function edit_category_process($id, Request $data)
+    {
+        $valid = $data->validate([
+        'name' => ['required', 'min:5', 'max:15', 'string']
+        ]);
+
+        $review = CategoryModel::find($id);
+        $review->name = $data->input('name');
+        $review->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function delete_category_process($id)
+    {
+        CategoryModel::find($id)->delete();
+        return redirect()->route('a_category');
     }
 
     public function main_carousel(){

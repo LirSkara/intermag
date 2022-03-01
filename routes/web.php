@@ -14,6 +14,11 @@ Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('m
 Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
 Route::post('/exit_carousel/{id}', [AdminController::class, 'exit_carousel']);
 Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
+Route::get('/category', [AdminController::class, 'category'])->name('a_category');
+Route::post('/category', [AdminController::class, 'category_process']);
+Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
+Route::get('/delete_category/{id}', [AdminController::class, 'delete_category_process']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);
