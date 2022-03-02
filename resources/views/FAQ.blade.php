@@ -22,7 +22,7 @@
                 <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                   <p>
                     
-
+          
 В маркетплейсах у пользователей есть 2 роли: заказчик и исполнитель.
 
 В маркетплейсах пользователь может быть в обеих ролях. По умолчанию — регистрируется как заказчик (по статистике YouDo, на 5 заказчиков 1 исполнитель). Для того чтобы стать исполнителем, заполняет анкету, где указывает информацию о себе, портфолио, дипломы и прочую информацию в зависимости от сферы
@@ -119,7 +119,17 @@
                 </div>
                 </div>
               </li>
+              <li data-aos="fade-up" data-aos-delay="400">
+              @foreach($main_carousel as $carousel)
+                <div class="alert alert-success" role="alert">
+                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed"><i class="bx bx-chevron-down icon-show">{{$faq->question}}</i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
+                  <p>{{$faq->answer}}</p>
+                </div>
+                </div>
+              </li>
             </ul>
+            
           </div>
   
         </div>

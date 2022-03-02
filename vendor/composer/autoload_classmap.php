@@ -21,9 +21,15 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
+    'App\\Models\\Advertising_two' => $baseDir . '/app/Models/Advertising_two.php',
+=======
+    'App\\Models\\CategoryModel' => $baseDir . '/app/Models/CategoryModel.php',
+>>>>>>> a6999d3d71b4abf0aebd8777123508e22306e66f
     'App\\Models\\MainCarousel' => $baseDir . '/app/Models/MainCarousel.php',
     'App\\Models\\MainFaq' => $baseDir . '/app/Models/MainFaq.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Models\\advertising' => $baseDir . '/app/Models/advertising.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

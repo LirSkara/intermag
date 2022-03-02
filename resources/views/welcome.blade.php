@@ -32,13 +32,13 @@
                     <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
                         <!-- Start Small Banner -->
                         <div class="hero-small-banner"
-                            style="background-image: url('assets/images/hero/slider-bnr.jpg');">
+                            style="background-image: url(storage/advertising_one/{{$advertising_one->img}});">
                             <div class="content">
                                 <h2>
-                                    <span>Требуется новая строка</span>
-                                    iPhone 12 Pro Max
+                                    <span> {{$advertising_one->description}}</span>
+                                   {{$advertising_one->title}}
                                 </h2>
-                                <h3>$259.99</h3>
+                                <h3> {{$advertising_one->price}}</h3>
                             </div>
                         </div>
                         <!-- End Small Banner -->
