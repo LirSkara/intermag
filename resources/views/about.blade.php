@@ -35,8 +35,7 @@
                 <h4 class="title">входим в ТОП-100 в рейтинге интернет-площадок</h4>
               </div>
               <div class="alert alert-info" role="alert">
-                <h4 class="description">В ТОПе поисковой выдачи
-товары продавцов</h4>
+                <h4 class="description">В ТОПе поисковой выдачи товары продавцов</h4>
               </div>
            
           </div>
