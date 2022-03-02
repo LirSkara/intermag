@@ -13,9 +13,9 @@ class MainController extends Controller
         $main_carousel = new MainCarousel;
         return view('welcome', ['main_carousel' => $main_carousel->all()]);
     }
-    public function faq(){
+    public function FAQ(){
         $main_faq = new MainFaq;
-        return view('faq', ['main_faq' => $main_faq->all()]);
+        return view('FAQ', ['main_faq' => $main_faq->all()]);
     }
     public function product(){
         return view('product');
@@ -24,6 +24,8 @@ class MainController extends Controller
     public function about(){
         return view('about');
     }
-    
+    public function FAQ(){
+        return view('FAQ');
+    }
 
 }

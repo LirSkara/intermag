@@ -85,8 +85,8 @@ class AdminController extends Controller
     }
     public function main_faq()
     {
-    $main_faq = new MainFaq;
-    return view('admin.main_faq');
+    $main_faq = new MainFaq();
+    return view('admin.main_faq',['main_faq'=>$main_faq->all()]);
     }
     public function add_faq(Request $data){
         $valid = $data->validate([
@@ -94,10 +94,10 @@ class AdminController extends Controller
             'answer' => ['required']
          ]); 
 
-        $faq = new MainFaq();
+        $main_faq = new MainFaq();
         $faq->question = $data->input('question');
         $faq->answer = $data->input('answer');;
-        $carousel->save();
+        $faq->save();
 
         return redirect()->route('main_faq');
     }
