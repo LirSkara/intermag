@@ -3,27 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainCarousel;
-<<<<<<< HEAD
+
+use App\Models\MainFaq;
 use App\Models\advertising;
-=======
 use App\Models\CategoryModel;
-
->>>>>>> a6999d3d71b4abf0aebd8777123508e22306e66f
 use Illuminate\Http\Request;
-
 class MainController extends Controller
 {
     public function home(){
-        $main_carousel = new MainCarousel;
-<<<<<<< HEAD
-        $advertising =  new advertising;
-        return view('welcome', ['main_carousel' => $main_carousel->all(), 'advertising_one' => $advertising->first()]);
-=======
+        $main_carousel = new MainCarousel();
+        $advertising =  new advertising();
+        $advertising_count =  advertising::count();
         $reviews = new CategoryModel();
-        return view('welcome', ['main_carousel' => $main_carousel->all(),'reviews' => $reviews->orderBy('id','desc')->get()]);
->>>>>>> a6999d3d71b4abf0aebd8777123508e22306e66f
+        return view('welcome', ['main_carousel' => $main_carousel->all(), 'advertising_one' => $advertising->first(), 'reviews' => $reviews->orderBy('id','desc')->get(), 'advertising_count' => $advertising_count]);
     }
 
+    public function FAQ(){
+        $main_faq = new MainFaq;
+        return view('FAQ', ['main_faq' => $main_faq ->all()]);
+    }
+    
     public function product(){
         return view('product');
     }
@@ -31,8 +30,5 @@ class MainController extends Controller
     public function about(){
         return view('about');
     }
-    
-    public function FAQ(){
-        return view('FAQ');
-    }
+
 }

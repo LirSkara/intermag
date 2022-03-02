@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\MainCarousel;
-<<<<<<< HEAD
 use App\Models\ProductModel;
-=======
+use App\Models\MainFaq;
 use App\Models\CategoryModel;
->>>>>>> cbb014ef5fb9dacb68908a94f4380473a22877fb
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -126,7 +124,6 @@ class AdminController extends Controller
         MainCarousel::find($id)->delete();
         return redirect()->route('main_carousel');
     }
-<<<<<<< HEAD
 
     public function main_tovar(){
         $tovar = new ProductModel();
@@ -206,20 +203,36 @@ class AdminController extends Controller
         $tovar = ProductModel::find($id);
         return view('admin.details_product', ['tovar' => $tovar]);
     }   
-=======
-    public function banner_servis(){
-        return view ('admin.banner_servis');
+
+    public function main_faq()
+    {
+        $main_faq = new MainFaq();
+        return view('admin.main_faq',['main_faq'=>$main_faq->all()]);
+    }
+    public function add_faq(Request $data){
+        $valid = $data->validate([
+            'question' => ['required'],
+            'answer' => ['required']
+         ]); 
+
+        $main_faq = new MainFaq();
+        $main_faq->question = $data->input('question');
+        $main_faq->answer = $data->input('answer');;
+        $main_faq->save();
+
+        return redirect()->route('main_faq');
     }
 
 
-
-
-
+    public function banner_servis(){
+        return view ('admin.banner_servis');
+    }
 
     public function advertising_one(){
         $advertising = new advertising;
         return view ('admin.advertising_one' , ['advertising' => $advertising->all()]);
     }
+
     public function add_advertising_one(Request $data){
         $valid = $data->validate([
             'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
@@ -276,13 +289,10 @@ class AdminController extends Controller
 
         return redirect()->route('advertising_one');
     }
+
     public function delete_advertising($id){
         advertising::find($id)->delete();
         return redirect()->route('advertising_one');
     }
-    public function advertising_two(){
-        $advertising = new Advertising_two;
-        return view ('admin.advertising_two' , ['advertising' => $advertising->all()]);
->>>>>>> cbb014ef5fb9dacb68908a94f4380473a22877fb
-}
+
 }

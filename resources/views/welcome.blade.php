@@ -31,6 +31,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
                         <!-- Start Small Banner -->
+                    @if($advertising_count != 0)
                         <div class="hero-small-banner"
                             style="background-image: url(storage/advertising_one/{{$advertising_one->img}});">
                             <div class="content">
@@ -42,6 +43,7 @@
                             </div>
                         </div>
                         <!-- End Small Banner -->
+                    @endif
                     </div>
                     <div class="col-lg-12 col-md-6 col-12">
                         <!-- Start Small Banner -->

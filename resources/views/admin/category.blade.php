@@ -1,9 +1,10 @@
 @extends('admin.admin_layout')
 @section('admin_main')
-     <div class="container d-flex flex-column mt-5 me-4">
-         <div class="pagetitle mt-5">
-            <div class="d-flex ms-5 ps-5">
-                <div class="ms-5">
+<main id="main" class="main">
+     <div class="container d-flex flex-column px-0">
+         <div class="pagetitle">
+            <div class="d-flex">
+                <div>
                     <h1>Категории</h1>
                     <nav>
                         <ol class="breadcrumb mb-0">
@@ -104,4 +105,5 @@
 
     </div>
 </div> 
+</main>
 @endsection
