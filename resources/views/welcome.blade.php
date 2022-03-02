@@ -16,7 +16,7 @@
                                         {{$carousel->name_cart}}
                                     </h2>
                                     <p>{{$carousel->description}}</p>
-                                    <h3><span>{{$carousel->text_price}}</span> {{$carousel->price}}</h3>
+                                    <h3><span>{{$carousel->text_price}}</span> {{$carousel->price}} р</h3>
                                     <div class="button">
                                         <a href="product-grids.html" class="btn">Купить сейчас</a>
                                     </div>
@@ -31,19 +31,19 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
                         <!-- Start Small Banner -->
-                    @if($advertising_count != 0)
-                        <div class="hero-small-banner"
-                            style="background-image: url(storage/advertising_one/{{$advertising_one->img}});">
-                            <div class="content">
-                                <h2>
-                                    <span> {{$advertising_one->description}}</span>
-                                   {{$advertising_one->title}}
-                                </h2>
-                                <h3> {{$advertising_one->price}}</h3>
+                        @if($advertising_count != 0)
+                            <div class="hero-small-banner"
+                                style="background-image: url(storage/advertising_one/{{$advertising_one->img}});">
+                                <div class="content">
+                                    <h2>
+                                        <span> {{$advertising_one->description}}</span>
+                                    {{$advertising_one->title}}
+                                    </h2>
+                                    <h3> {{$advertising_one->price}}</h3>
+                                </div>
                             </div>
-                        </div>
-                        <!-- End Small Banner -->
-                    @endif
+                            <!-- End Small Banner -->
+                        @endif
                     </div>
                     <div class="col-lg-12 col-md-6 col-12">
                         <!-- Start Small Banner -->
