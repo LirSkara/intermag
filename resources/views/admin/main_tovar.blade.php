@@ -27,8 +27,8 @@
                         <div class="product-image">
                             <img src="/storage/tovar/{{$item->img}}" alt="#">
                             <div class="button">
-                                <button class="btn bg-blue" data-bs-toggle="modal" data-bs-target="#edittovar">Редактировать</button>
-                                <button class="btn bg-red mt-2" data-bs-toggle="modal" data-bs-target="#deletetovar">Удалить</button>
+                                <button class="btn bg-blue" data-bs-toggle="modal" data-bs-target="#edittovar{{$item->id}}">Редактировать</button>
+                                <button class="btn bg-red mt-2" data-bs-toggle="modal" data-bs-target="#deletetovar{{$item->id}}">Удалить</button>
                             </div>
                         </div>
                         <div class="product-info">
@@ -53,7 +53,7 @@
                 </div>
 
                 <!-- Modal Edit Tovar -->
-                <div class="modal fade" id="edittovar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="edittovar{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header d-flex border-0">
@@ -96,7 +96,7 @@
                 </div>
 
                 <!-- Modal delete -->
-                <div class="modal fade" id="deletetovar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="deletetovar{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
                         <div class="modal-content">
                             <div class="modal-body">

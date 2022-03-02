@@ -26,8 +26,8 @@
                         <div class="filter">
                             <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit">Редактировать</button></li>
-                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete">Удалить</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#edit{{$item->id}}">Редактировать</button></li>
+                                <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#delete{{$item->id}}">Удалить</button></li>
                             </ul>
                         </div>
 
@@ -38,7 +38,7 @@
                 </div>
 
                 <!-- Modal Edit -->
-                <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="edit{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header d-flex border-0">
@@ -62,7 +62,7 @@
                 </div>
 
                 <!-- Modal delete -->
-                <div class="modal fade" id="delete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="delete{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
                         <div class="modal-content">
                             <div class="modal-body">

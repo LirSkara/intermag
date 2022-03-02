@@ -39,7 +39,7 @@
                                         <span> {{$advertising_one->description}}</span>
                                     {{$advertising_one->title}}
                                     </h2>
-                                    <h3> {{$advertising_one->price}}</h3>
+                                    <h3> {{$advertising_one->price}} р</h3>
                                 </div>
                             </div>
                             <!-- End Small Banner -->
