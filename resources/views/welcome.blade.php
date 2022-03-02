@@ -36,6 +36,7 @@
                             <div class="content">
                                 <h2>
                                     <span>Требуется новая строка</span>
+                        
                                     iPhone 12 Pro Max
                                 </h2>
                                 <h3>$259.99</h3>

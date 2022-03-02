@@ -39,3 +39,211 @@
     font-weight: 700;
 }
 /* Конец карусели */
+
+/* Начало карточек товаров */
+.single-product {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 20px #00000012;
+    box-shadow: 0px 0px 20px #00000012;
+    padding: 8px;
+    background: #fff;
+}
+
+.single-product .product-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.single-product .product-image .sale-tag {
+    background: #f73232;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    padding: 5px 10px;
+    left: 0;
+    z-index: 22;
+}
+
+.single-product .product-image .new-tag {
+    background: #0167f3;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    padding: 5px 10px;
+    left: 0;
+    z-index: 22;
+}
+
+.single-product .product-image .button {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -60px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.single-product .product-image .button .btn {
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    width: 140px;
+}
+
+.single-product .product-image .button .btn i {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.single-product .product-image img {
+    width: 100%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.single-product:hover .product-image .button {
+    bottom: 30px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.single-product:hover .product-image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.single-product .product-info {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.single-product .product-info .category {
+    color: #888;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.single-product .product-info .title a {
+    font-size: 16px;
+    font-weight: 700;
+    color: #081828;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0167f3;
+    display: inline-block;
+}
+
+.single-product .product-info .review {
+    margin-top: 5px;
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.single-product .product-info .review li {
+    display: inline-block;
+}
+
+.single-product .product-info .review li span {
+    display: inline-block;
+    margin-left: 4px;
+    color: #888;
+    font-size: 13px;
+}
+
+.single-product .product-info .title a {
+    font-size: 16px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    color: #081828;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px;
+    color: #081828;
+}
+
+.single-product .product-info .review li i {
+    color: #fecb00;
+    font-size: 13px;
+}
+
+.button .btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    margin-right: 7px;
+    overflow: hidden;
+}
+
+.bg-blue {
+    background-color: #0167f3;
+    color: #fff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.bg-red {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-danger-rgb));
+    color: #fff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.bg-green {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-success-rgb));
+    color: #fff;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.bg-blue:hover {
+    color: #fff;
+    background-color: #081828;
+    -webkit-box-shadow: 0px 4px 4px #0000000f;
+    box-shadow: 0px 4px 4px #0000000f;
+}
+
+.bg-red:hover {
+    color: #fff;
+    background-color: #081828;
+    -webkit-box-shadow: 0px 4px 4px #0000000f;
+    box-shadow: 0px 4px 4px #0000000f;
+}
+
+.bg-green:hover {
+    color: #fff;
+    background-color: #081828;
+    -webkit-box-shadow: 0px 4px 4px #0000000f;
+    box-shadow: 0px 4px 4px #0000000f;
+}
+/* Конец карточек товаров */

@@ -14,6 +14,11 @@ Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('m
 Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
 Route::post('/exit_carousel/{id}', [AdminController::class, 'exit_carousel']);
 Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
+Route::get('/main_tovar', [AdminController::class, 'main_tovar'])->name('main_tovar');
+Route::post('/add_tovar', [AdminController::class, 'add_tovar']);
+Route::post('/exit_tovar/{id}', [AdminController::class, 'exit_tovar']);
+Route::get('/delete_tovar/{id}', [AdminController::class, 'delete_tovar']);
+Route::get('/details_product/{id}', [AdminController::class, 'details_product']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);
