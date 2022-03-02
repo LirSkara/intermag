@@ -29,3 +29,16 @@ Route::middleware('guest')->group(function () {
 Route::get('/about', [MainController::class, 'about']);
 Route::get('/FAQ', [MainController::class, 'FAQ']);
 Route::get('/banner_servis', [AdminController::class, 'banner_servis']);
+
+
+
+Route::get('/advertising_one', [AdminController::class, 'advertising_one'])->name('advertising_one');
+Route::post('/add_advertising_one', [AdminController::class, 'add_advertising_one']);
+Route::post('/exit_advertising/{id}', [AdminController::class, 'exit_advertising']);
+Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertising']);
+
+
+Route::get('/advertising_two', [AdminController::class, 'advertising_two'])->name('advertising_two');
+Route::post('/advertising_two', [AdminController::class, 'advertising_two']);
+// Route::post('/exit_advertising/{id}', [AdminController::class, 'exit_advertising']);
+// Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertising']);
