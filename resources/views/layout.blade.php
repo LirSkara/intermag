@@ -171,7 +171,7 @@
                         <div class="mega-category-menu">
                             <span class="cat-button"><i class="lni lni-menu"></i>Все категории</span>
                             <ul class="sub-category">
-                                @foreach($reviews as $item)
+                                @foreach($categories as $item)
                                 <li><a href="product-grids.html">{{$item->name}}</a></li>
                                 @endforeach
                             </ul>
