@@ -48,8 +48,8 @@
 
             <!-- End Page Title -->
             @foreach($reviews as $item)
-            <div class="container mt-5 text-center ms-5 bg-light">
-                <div class="d-flex flex-column ps-5 ms-4">
+            <div class="container mt-4 text-center bg-light">
+                <div class="d-flex flex-column">
                     <div class="d-flex"><h3 class="lead fs-3">{{$item->name}}</h3>
                         <div class="btn-group dropend ms-1">
                         <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
