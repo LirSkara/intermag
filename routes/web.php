@@ -14,11 +14,18 @@ Route::get('/main_carousel', [AdminController::class, 'main_carousel'])->name('m
 Route::post('/add_carousel', [AdminController::class, 'add_carousel']);
 Route::post('/exit_carousel/{id}', [AdminController::class, 'exit_carousel']);
 Route::get('/delete_carousel/{id}', [AdminController::class, 'delete_carousel']);
+
 Route::get('/main_tovar', [AdminController::class, 'main_tovar'])->name('main_tovar');
 Route::post('/add_tovar', [AdminController::class, 'add_tovar']);
 Route::post('/exit_tovar/{id}', [AdminController::class, 'exit_tovar']);
 Route::get('/delete_tovar/{id}', [AdminController::class, 'delete_tovar']);
 Route::get('/details_product/{id}', [AdminController::class, 'details_product']);
+
+Route::get('/category', [AdminController::class, 'category'])->name('a_category');
+Route::post('/category', [AdminController::class, 'category_process']);
+Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
+Route::get('/delete_category/{id}', [AdminController::class, 'delete_category_process']);
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);
@@ -33,3 +40,15 @@ Route::middleware('guest')->group(function () {
 
 Route::get('/about', [MainController::class, 'about']);
 Route::get('/FAQ', [MainController::class, 'FAQ']);
+Route::get('/banner_servis', [AdminController::class, 'banner_servis']);
+
+
+
+Route::get('/advertising_one', [AdminController::class, 'advertising_one'])->name('advertising_one');
+Route::post('/add_advertising_one', [AdminController::class, 'add_advertising_one']);
+Route::post('/exit_advertising/{id}', [AdminController::class, 'exit_advertising']);
+Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertising']);
+
+
+Route::get('/advertising_two', [AdminController::class, 'advertising_two'])->name('advertising_two');
+Route::post('/advertising_two', [AdminController::class, 'advertising_two']);

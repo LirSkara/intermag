@@ -171,31 +171,9 @@
                         <div class="mega-category-menu">
                             <span class="cat-button"><i class="lni lni-menu"></i>Все категории</span>
                             <ul class="sub-category">
-                                <li><a href="product-grids.html">Электроника <i class="lni lni-chevron-right"></i></a>
-                                    <ul class="inner-sub-category">
-                                        <li><a href="product-grids.html">Цифровые камеры</a></li>
-                                        <li><a href="product-grids.html">Видеокамеры</a></li>
-                                        <li><a href="product-grids.html">Дроны с камерой</a></li>
-                                        <li><a href="product-grids.html">Умные часы</a></li>
-                                        <li><a href="product-grids.html">Наушники</a></li>
-                                        <li><a href="product-grids.html">MP3-Плееры</a></li>
-                                        <li><a href="product-grids.html">Микрофоны</a></li>
-                                        <li><a href="product-grids.html">Зарядные устройства</a></li>
-                                        <li><a href="product-grids.html">Батареи</a></li>
-                                        <li><a href="product-grids.html">Кабели и Адаптеры</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="product-grids.html">Аксессуары</a></li>
-                                <li><a href="product-grids.html">Телевизоры</a></li>
-                                <li><a href="product-grids.html">Самые продаваемые</a></li>
-                                <li><a href="product-grids.html">Топ-100 предложений</a></li>
-                                <li><a href="product-grids.html">Солнцезащитные очки</a></li>
-                                <li><a href="product-grids.html">Часы</a></li>
-                                <li><a href="product-grids.html">Мужские продукты</a></li>
-                                <li><a href="product-grids.html">Домашнее Аудио и Кинотеатр</a></li>
-                                <li><a href="product-grids.html">Компьютеры и планшеты </a></li>
-                                <li><a href="product-grids.html">Видеоигры</a></li>
-                                <li><a href="product-grids.html">Бытовая Техника </a></li>
+                                @foreach($reviews as $item)
+                                <li><a href="product-grids.html">{{$item->name}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                         <!-- End Mega Category Menu -->
