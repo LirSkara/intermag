@@ -296,6 +296,11 @@
               <i class="bi bi-circle"></i><span>Карусель</span>
             </a>
           </li>
+          <li>
+            <a href="/main_faq">
+              <i class="bi bi-circle"></i><span>Часто задаваемые вопросы</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Components Nav -->
 
