@@ -203,27 +203,45 @@ class AdminController extends Controller
         $tovar = ProductModel::find($id);
         return view('admin.details_product', ['tovar' => $tovar]);
     }   
-
-    public function main_faq()
-    {
-        $main_faq = new MainFaq();
-        return view('admin.main_faq',['main_faq'=>$main_faq->all()]);
+    ///
+    public function main_faq(){
+        $main_faq = new MainFaq;
+        return view('admin.main_faq', ['main_faq' => $main_faq->all()]);
     }
+
     public function add_faq(Request $data){
         $valid = $data->validate([
             'question' => ['required'],
             'answer' => ['required']
          ]); 
-
-        $main_faq = new MainFaq();
-        $main_faq->question = $data->input('question');
-        $main_faq->answer = $data->input('answer');;
-        $main_faq->save();
+        $faq = new MainFaq();
+        $faq->question = $data->input('question');
+        $faq->answer = $data->input('answer');
+        $faq->save();
 
         return redirect()->route('main_faq');
     }
 
+    public function exit_faq(Request $data, $id){
+        $valid = $data->validate([
+            'question' => ['required'],
+            'answer' => ['required']
+        ]); 
+        
+        $faq = MainFaq::find($id);
+        $faq->question = $data->input('question');
+        $faq->answer = $data->input('answer');
+        $faq->save();
 
+        return redirect()->route('main_faq');
+    }
+
+    public function delete_faq($id){
+        MainFaq::find($id)->delete();
+        return redirect()->route('main_faq');
+    }
+
+    ////
     public function banner_servis(){
         return view ('admin.banner_servis');
     }
