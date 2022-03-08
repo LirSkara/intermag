@@ -10,6 +10,8 @@ use App\Models\CategoryModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
+use App\Models\AdvertisingTwo;
+use App\Models\AdvertisingThree;
 
 class AdminController extends Controller
 {
@@ -228,6 +230,8 @@ class AdminController extends Controller
         return view ('admin.banner_servis');
     }
 
+
+// реклама ниже navbar start
     public function advertising_one(){
         $advertising = new advertising;
         return view ('admin.advertising_one' , ['advertising' => $advertising->all()]);
@@ -268,7 +272,7 @@ class AdminController extends Controller
         
         $advertising = advertising::find($id);
         if($data->file('img') != '') {
-            $upload_folder = 'public/advertising_one/'; //Создается автоматически
+            $upload_folder = 'public/advertising_two/'; //Создается автоматически
             $file = $data->file('img');
             $filename = $file->getClientOriginalName();
             Storage::delete($upload_folder . '/' . $advertising->img);
@@ -279,14 +283,11 @@ class AdminController extends Controller
             $advertising->img = $advertising->img;
         }
         
-        $advertising->img = $data->input('img');
         $advertising->title = $data->input('title');
         $advertising->description = $data->input('description');
         $advertising->price = $data->input('price');
         $advertising->link = $data->input('link');
-        $advertising->status = $advertising->img;
         $advertising->save();
-
         return redirect()->route('advertising_one');
     }
 
@@ -295,4 +296,135 @@ class AdminController extends Controller
         return redirect()->route('advertising_one');
     }
 
+// реклама ниже navbar end
+
+
+// реклама выше footer start
+    public function advertising_two(){
+        $advertising = new AdvertisingTwo;
+        return view ('admin.advertising_two' , ['advertising' => $advertising->all()]);
+    }
+    public function add_advertising_two(Request $data){
+        $valid = $data->validate([
+            'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'price' => ['required'],
+            'link' => ['required'],
+         ]); 
+
+        $file = $data->file('img');
+        $upload_folder = 'public/advertising_two/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+
+        $advertising = new AdvertisingTwo();
+        $advertising->img = $filename;
+        $advertising->title = $data->input('title');
+        $advertising->description = $data->input('description');
+        $advertising->price = $data->input('price');
+        $advertising->link = $data->input('link');
+        $advertising->status = 0;
+        $advertising->save();
+        return redirect()->route('advertising_two');
+    }
+    public function exit_advertisingTwo(Request $data, $id){
+        $valid = $data->validate([
+            'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'price' => ['required'],
+            'link' => ['required']
+        ]); 
+        
+        $advertising = AdvertisingTwo::find($id);
+        if($data->file('img') != '') {
+            $upload_folder = 'public/advertising_two/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $advertising->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $advertising->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $advertising->img = $advertising->img;
+        }
+        
+        $advertising->title = $data->input('title');
+        $advertising->description = $data->input('description');
+        $advertising->price = $data->input('price');
+        $advertising->link = $data->input('link');
+        $advertising->save();
+
+        return redirect()->route('advertising_two');
+    }
+    public function delete_advertisingTwo($id){
+        AdvertisingTwo::find($id)->delete();
+        return redirect()->route('advertising_two');
+    }
+
+// реклама выше footer end
+
+public function advertising_three(){
+    $advertising = new AdvertisingThree();
+    return view ('admin.advertising_three' , ['advertising' => $advertising->all()]);
+}
+public function add_advertising_three(Request $data){
+    $valid = $data->validate([
+        'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'title' => ['required'],
+        'description' => ['required'],
+        'price' => ['required'],
+        'link' => ['required']
+     ]); 
+
+    $file = $data->file('img');
+    $upload_folder = 'public/advertising_three/'; //Создается автоматически
+    $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+    Storage::putFileAs($upload_folder, $file, $filename); 
+
+    $advertising = new AdvertisingThree();
+    $advertising->img = $filename;
+    $advertising->title = $data->input('title');
+    $advertising->description = $data->input('description');
+    $advertising->price = $data->input('price');
+    $advertising->link = $data->input('link');
+    $advertising->status = 0;
+    $advertising->save();
+    return redirect()->route('advertising_three');
+}
+public function exit_advertisingThree(Request $data, $id){
+    $valid = $data->validate([
+        'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'title' => ['required'],
+        'description' => ['required'],
+        'price' => ['required'],
+        'link' => ['required']
+    ]); 
+    
+    $advertising = AdvertisingThree::find($id);
+    if($data->file('img') != '') {
+        $upload_folder = 'public/advertising_three/'; //Создается автоматически
+        $file = $data->file('img');
+        $filename = $file->getClientOriginalName();
+        Storage::delete($upload_folder . '/' . $advertising->img);
+        Storage::putFileAs($upload_folder, $file, $filename);    
+        $advertising->img = $filename;
+        Storage::putFileAs($upload_folder, $file, $filename); 
+    } else {
+        $advertising->img = $advertising->img;
+    }
+    
+    $advertising->title = $data->input('title');
+    $advertising->description = $data->input('description');
+    $advertising->price = $data->input('price');
+    $advertising->link = $data->input('link');
+    $advertising->save();
+
+    return redirect()->route('advertising_three');
+}  
+public function delete_advertisingThree($id){
+    AdvertisingThree::find($id)->delete();
+    return redirect()->route('advertising_three');
+}
 }

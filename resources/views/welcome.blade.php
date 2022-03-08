@@ -346,35 +346,37 @@
 <section class="banner section">
     <div class="container">
         <div class="row">
+            @if($advertising_two_count != 0)
             <div class="col-lg-6 col-md-6 col-12">
-                <div class="single-banner" style="background-image:url('assets/images/banner/banner-1-bg.jpg')">
+                <div class="single-banner" style="background-image:url(storage/advertising_two/{{$advertising_two->img}})">
                     <div class="content">
-                        <h2>Умные часы 2.0</h2>
-                        <p>Космический серый алюминиевый корпус с <br>Черная / Вольтовая Настоящая Спортивная лента </p>
+                        <h2>{{$advertising_two->description}}</h2>
+                        <p class="col-lg-6 col-md-6 col-12">{{$advertising_two->title}}</p>
                         <div class="button">
-                            <a href="product-grids.html" class="btn">Просмотр подробных сведений</a>
+                            <a href="{{$advertising_two->link}}" class="btn">Просмотр подробных сведений</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="single-banner custom-responsive-margin"
-                    style="background-image:url('assets/images/banner/banner-2-bg.jpg')">
-                    <div class="content">
-                        <h2>Умные наушники</h2>
-                        <p>Основные характеристики, <br>eiusmod темпор
- так же мало, как и усилий.</p>
-                        <div class="button">
-                            <a href="product-grids.html" class="btn">Купить сейчас</a>
+            @endif
+            @if($advertising_three_count != 0)
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="single-banner custom-responsive-margin"
+                        style="background-image:url('storage/advertising_three/{{$advertising_three->img}}')">
+                        <div class="content">
+                            <h2>{{$advertising_three->description}}</h2>
+                            <p>{{$advertising_three->title}}</p>
+                            <div class="button">
+                                <a href="{{$advertising_three->link}}" class="btn">Купить сейчас</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
         </div>
     </div>
 </section>
 <!-- End Banner Area -->
-
 <!-- Start Shipping Info -->
 <section class="shipping-info">
     <div class="container">

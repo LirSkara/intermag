@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('advertising_twos', function (Blueprint $table) {
             $table->id();
+            $table->text('img');
+            $table->string('title');
+            $table->text('description');
+            $table->text('price');
+            $table->text('link');
+            $table->string('status');
             $table->timestamps();
         });
     }
