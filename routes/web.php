@@ -25,6 +25,9 @@ Route::get('/details_product/{id}', [AdminController::class, 'details_product'])
 
 Route::get('/main_faq', [AdminController::class, 'main_faq'])->name('main_faq');
 Route::post('/add_faq', [AdminController::class, 'add_faq']);
+Route::post('/exit_faq/{id}', [AdminController::class, 'exit_faq']);
+Route::get('/delete_faq/{id}', [AdminController::class, 'delete_faq']);
+
 Route::get('/category', [AdminController::class, 'category'])->name('a_category');
 Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);

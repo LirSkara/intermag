@@ -206,7 +206,7 @@ class AdminController extends Controller
     }   
     ///
     public function main_faq(){
-        $main_faq = new MainFaq;
+        $main_faq = new MainFaq();
         return view('admin.main_faq', ['main_faq' => $main_faq->all()]);
     }
 
@@ -267,6 +267,8 @@ class AdminController extends Controller
         Storage::putFileAs($upload_folder, $file, $filename); 
 
         $advertising = new advertising();
+
+        
         $advertising->img = $filename;
         $advertising->title = $data->input('title');
         $advertising->description = $data->input('description');
