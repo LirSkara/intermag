@@ -320,7 +320,7 @@
             </a>
           </li>
           <li>
-            <a href="forms-editors.html">
+            <a href="/advertising_three">
               <i class="bi bi-circle"></i><span>Реклама 3</span>
             </a>
           </li>

@@ -59,12 +59,13 @@ Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertis
 
 
 Route::get('/advertising_two', [AdminController::class, 'advertising_two'])->name('advertising_two');
-
-Route::post('/advertising_two', [AdminController::class, 'advertising_two']);
+Route::post('/add_advertising_two', [AdminController::class, 'add_advertising_two']);
+Route::post('/exit_advertisingTwo/{id}', [AdminController::class, 'exit_advertisingTwo']);
+Route::get('/delete_advertisingTwo/{id}', [AdminController::class, 'delete_advertisingTwo']);
 
 Route::get('/advertising_three', [AdminController::class, 'advertising_three'])->name('advertising_three');
-Route::post('/advertising_three', [AdminController::class, 'advertising_three']);
-Route::post('/exit_advertising/{id}', [AdminController::class, 'exit_advertising']);
-Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertising']);
+Route::post('/add_advertising_three', [AdminController::class, 'add_advertising_three']);
+Route::post('/exit_advertisingThree/{id}', [AdminController::class, 'exit_advertisingThree']);
+Route::get('/delete_advertisingThree/{id}', [AdminController::class, 'delete_advertisingThree']);
 
 

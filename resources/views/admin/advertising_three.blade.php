@@ -1,6 +1,7 @@
 @extends('admin.admin_layout')
 @section('admin_main')
 
+
 <main id="main" class="main">
 
     <div class="container d-flex flex-column px-0">
@@ -11,7 +12,7 @@
                     <nav>
                         <ol class="breadcrumb mb-0">
                             <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                            <li class="breadcrumb-item active">Реклама 2</li>
+                            <li class="breadcrumb-item active">Реклама 3</li>
                         </ol>
                     </nav>
                 </div>
@@ -36,12 +37,11 @@
     
                             <div class="card-body">
                             <h2 class="carousel-name mt-2 text-truncate w-75">{{$item->title}}</h2>    
-                            <div style="background-image: url(storage/advertising_two/{{$item->img}}); background-size: cover; height: 200px"></div>
+                            <div style="background-image: url(storage/advertising_three/{{$item->img}}); background-size: cover; height: 200px"></div>
                             </div>
     
                         </div>
                     </div><!-- End Sales Card -->
-    
                     <!-- Modal Exit Carousel -->
                     <div class="modal fade" id="exitadvertising{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
@@ -51,7 +51,7 @@
                                 <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="/exit_advertisingTwo/{{$item->id}}" method="POST" enctype="multipart/form-data">
+                                <form action="/exit_advertisingThree/{{$item->id}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                     <div>
                                         <label>Выберите фото</label>
@@ -114,7 +114,7 @@
             <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/add_advertising_two" method="POST" enctype="multipart/form-data">
+            <form action="/add_advertising_three" method="POST" enctype="multipart/form-data">
             @csrf
                 <div>
                     <label>Выберите фото</label>
@@ -163,4 +163,5 @@
           </div>
         </div>
       </div>
+    </div>
 @endsection
