@@ -28,7 +28,7 @@
                         <div class="filter">
                         <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                            <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exitcarousel">Редактировать</button></li>
+                            <li><button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#editcarousel{{$carousel->id}}">Редактировать</button></li>
                             <li><a class="dropdown-item" href="/delete_carousel/{{$carousel->id}}">Удалить</a></li>
                         </ul>
                         </div>
@@ -41,8 +41,8 @@
                     </div>
                 </div><!-- End Sales Card -->
 
-                <!-- Modal Exit Carousel -->
-                <div class="modal fade" id="exitcarousel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal Edit Carousel -->
+                <div class="modal fade" id="editcarousel{{$carousel->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header d-flex border-0">
@@ -50,7 +50,7 @@
                             <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form action="/exit_carousel/{{$carousel->id}}" method="POST" enctype="multipart/form-data">
+                            <form action="/edit_carousel/{{$carousel->id}}" method="POST" enctype="multipart/form-data">
                             @csrf
                                 <div>
                                     <label>Выберите фото</label>

@@ -89,7 +89,7 @@ class AdminController extends Controller
         return redirect()->route('main_carousel');
     }
 
-    public function exit_carousel(Request $data, $id){
+    public function edit_carousel(Request $data, $id){
         $valid = $data->validate([
             'foto' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
             'name_cart' => ['required'],
@@ -159,18 +159,7 @@ class AdminController extends Controller
         return redirect()->route('main_tovar');
     }
 
-    public function delete_tovar($id){
-        $tovar = ProductModel::find($id);
-
-        $upload_folder = 'public/tovar/';
-        Storage::delete($upload_folder.'/'.$tovar->img);
-
-        $tovar->delete();
-        
-        return redirect()->route('main_tovar');
-    }
-
-    public function exit_tovar(Request $data, $id){
+    public function edit_tovar(Request $data, $id){
         $valid = $data->validate([
             'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
             'name_tovar' => ['required'],
@@ -200,6 +189,18 @@ class AdminController extends Controller
 
         return redirect()->route('main_tovar');
     }
+    
+    public function delete_tovar($id){
+        $tovar = ProductModel::find($id);
+
+        $upload_folder = 'public/tovar/';
+        Storage::delete($upload_folder.'/'.$tovar->img);
+
+        $tovar->delete();
+        
+        return redirect()->route('main_tovar');
+    }
+
 
     public function details_product($id){
         $tovar = ProductModel::find($id);

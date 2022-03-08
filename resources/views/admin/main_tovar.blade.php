@@ -27,9 +27,8 @@
                         <div class="product-image">
                             <img src="/storage/tovar/{{$item->img}}" alt="#">
                             <div class="button">
-                                <button class="btn bg-blue" data-bs-toggle="modal" data-bs-target="#exittovar">Редактировать</button>
-                                <button class="btn bg-red mt-2" data-bs-toggle="modal" data-bs-target="#deletetovar">Удалить</button>
-                                <a href="/details_product/{{$item->id}}" class="btn bg-green mt-2">Подробнее</a>
+                                <button class="btn bg-blue" data-bs-toggle="modal" data-bs-target="#edittovar{{$item->id}}">Редактировать</button>
+                                <button class="btn bg-red mt-2" data-bs-toggle="modal" data-bs-target="#deletetovar{{$item->id}}">Удалить</button>
                             </div>
                         </div>
                         <div class="product-info">
@@ -53,8 +52,8 @@
                     <!-- End Single Product -->
                 </div>
 
-                <!-- Modal Exit Carousel -->
-                <div class="modal fade" id="exittovar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- Modal Edit Tovar -->
+                <div class="modal fade" id="edittovar{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header d-flex border-0">
@@ -62,7 +61,7 @@
                                 <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="/exit_tovar/{{$item->id}}" method="POST" enctype="multipart/form-data">
+                                <form action="/edit_tovar/{{$item->id}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                     <div>
                                         <label>Выберите главное фото товара</label>
@@ -96,8 +95,8 @@
                     </div>
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="deletetovar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <!-- Modal delete -->
+                <div class="modal fade" id="deletetovar{{$item->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -120,7 +119,7 @@
 
 </main><!-- End #main -->
 
-<!-- Modal Add Carousel -->
+<!-- Modal Add Tovar -->
 <div class="modal fade" id="addtovar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
