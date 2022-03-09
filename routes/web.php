@@ -7,7 +7,7 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/home', [MainController::class, 'home'])->name('home');
-Route::get('/product', [MainController::class, 'product']);
+Route::get('/product/{id}', [MainController::class, 'product']);
 Route::get('/FAQ', [MainController::class, 'FAQ']);
 
 Route::get('/admin_home', [AdminController::class, 'admin_home']);
@@ -27,6 +27,9 @@ Route::get('/approve_all', [AdminController::class, 'approve_all']);
 
 Route::get('/main_faq', [AdminController::class, 'main_faq'])->name('main_faq');
 Route::post('/add_faq', [AdminController::class, 'add_faq']);
+Route::post('/exit_faq/{id}', [AdminController::class, 'exit_faq']);
+Route::get('/delete_faq/{id}', [AdminController::class, 'delete_faq']);
+
 Route::get('/category', [AdminController::class, 'category'])->name('a_category');
 Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
@@ -61,12 +64,17 @@ Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertis
 
 
 Route::get('/advertising_two', [AdminController::class, 'advertising_two'])->name('advertising_two');
-
-Route::post('/advertising_two', [AdminController::class, 'advertising_two']);
+Route::post('/add_advertising_two', [AdminController::class, 'add_advertising_two']);
+Route::post('/exit_advertisingTwo/{id}', [AdminController::class, 'exit_advertisingTwo']);
+Route::get('/delete_advertisingTwo/{id}', [AdminController::class, 'delete_advertisingTwo']);
 
 Route::get('/advertising_three', [AdminController::class, 'advertising_three'])->name('advertising_three');
-Route::post('/advertising_three', [AdminController::class, 'advertising_three']);
-Route::post('/exit_advertising/{id}', [AdminController::class, 'exit_advertising']);
-Route::get('/delete_advertising/{id}', [AdminController::class, 'delete_advertising']);
+Route::post('/add_advertising_three', [AdminController::class, 'add_advertising_three']);
+Route::post('/exit_advertisingThree/{id}', [AdminController::class, 'exit_advertisingThree']);
+Route::get('/delete_advertisingThree/{id}', [AdminController::class, 'delete_advertisingThree']);
 
+Route::get('/hot_line', [AdminController::class, 'hot_line'])->name('hot_line');  
+Route::post('/add_hot_line', [AdminController::class, 'hot_line_process']);
+Route::post('/exit_hot_line/{id}', [AdminController::class, 'exit_hot_line']);
+Route::get('/delete_hot_line/{id}', [AdminController::class, 'delete_hot_line']);
 

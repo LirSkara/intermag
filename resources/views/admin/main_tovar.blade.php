@@ -291,7 +291,7 @@
   </div>
 </div>
 
-<!-- Modal delete -->
+<!-- Modal approve  -->
 <div class="modal fade" id="approve_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
         <div class="modal-content">

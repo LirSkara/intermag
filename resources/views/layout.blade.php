@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
-    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
                         <a class="navbar-brand" href="/">
-                            <img src="assets/images/logo/logo.svg" alt="Logo">
+                            <img src="/assets/images/logo/logo.svg" alt="Logo">
                         </a>
                         <!-- End Header Logo -->
                     </div>
@@ -71,12 +71,14 @@
                     </div>
                     <div class="col-lg-4 col-md-2 col-5">
                         <div class="middle-right-area">
-                            <div class="nav-hotline">
-                                <i class="lni lni-phone"></i>
-                                <h3>Горячая линия:
-                                    <span>(+100) 123 456 7890</span>
-                                </h3>
-                            </div>
+                            @if($hot_line_count == 1)
+                                <div class="nav-hotline">   
+                                    <i class="lni lni-phone"></i>
+                                    <h3>Горячая линия:
+                                        <span>{{$hot_line->tel}}</span>
+                                    </h3>
+                                </div>
+                            @endif
                             <div class="navbar-cart">
                                 <div class="wishlist">
                                     <a href="javascript:void(0)">
@@ -144,8 +146,8 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="d-flex flex-column">
-                                            <a href="#" class="text-dark mb-2 fs-6">Вход</a>
-                                            <a href="#" class="text-dark fs-6">Регистрация</a>
+                                            <a href="/login" class="text-dark mb-2 fs-6">Вход</a>
+                                            <a href="/register" class="text-dark fs-6">Регистрация</a>
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
@@ -283,7 +285,7 @@
                         <div class="col-lg-3 col-md-4 col-12">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/white-logo.svg" alt="#">
+                                    <img src="/assets/images/logo/white-logo.svg" alt="#">
                                 </a>
                             </div>
                         </div>
@@ -393,7 +395,7 @@
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
                                 <span>Способ оплаты:</span>
-                                <img src="assets/images/footer/credit-cards-footer.png" alt="#">
+                                <img src="/assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
@@ -426,10 +428,10 @@
     </a>
 
     <!-- ========================= JS here ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/tiny-slider.js"></script>
+    <script src="/assets/js/glightbox.min.js"></script>
+    <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
         //========= Hero Slider 
         tns({

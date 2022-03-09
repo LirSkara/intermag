@@ -28,27 +28,27 @@
                     <div class="product-images">
                         <main id="gallery">
                             <div class="main-img">
-                                <img src="assets/images/product-details/01.jpg" id="current" alt="#">
+                                <img src="/storage/tovar/{{$Product_Model->img}}" id="current" alt="#">
                             </div>
-                            <div class="images">
-                                <img src="assets/images/product-details/01.jpg" class="img" alt="#">
-                                <img src="assets/images/product-details/02.jpg" class="img" alt="#">
-                                <img src="assets/images/product-details/03.jpg" class="img" alt="#">
-                                <img src="assets/images/product-details/04.jpg" class="img" alt="#">
-                                <img src="assets/images/product-details/05.jpg" class="img" alt="#">
-                            </div>
+                            {{-- <div class="images">
+                                <img src="/assets/images/product-details/01.jpg" class="img" alt="#">
+                                <img src="/assets/images/product-details/02.jpg" class="img" alt="#">
+                                <img src="/assets/images/product-details/03.jpg" class="img" alt="#">
+                                <img src="/assets/images/product-details/04.jpg" class="img" alt="#">
+                                <img src="/assets/images/product-details/05.jpg" class="img" alt="#">
+                            </div> --}}
                         </main>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="product-info">
-                        <h2 class="title">GoPro Karma Camera Drone</h2>
-                        <p class="category"><i class="lni lni-tag"></i> Дроны:<a href="javascript:void(0)">Действие
-                                камеры</a></p>
-                        <h3 class="price">$850<span>$945</span></h3>
-                        <p class="info-text"> Lorem ipsum, повышенная конкуренция среди студентов, но сделайте eiusmod
- со временем</p>
-                        <div class="row">
+                        <h2 class="title">{{$Product_Model->name_tovar}}</h2>
+                        <p class="category"><i class="lni lni-tag"></i> Дроны:<a href="javascript:void(0)">{{$Product_Model->tags}}</a></p>
+                        {{-- <p class="category"><i class="lni lni-tag"></i> Дроны:<a href="javascript:void(0)">Действие
+                            камеры</a></p> --}}
+                        <h3 class="price">{{$Product_Model->price}}<span>{{$Product_Model->old_price}}</span></h3>
+                        <p class="info-text"> {{$Product_Model->description}}</p>
+                        {{-- <div class="row">
                             <div class="col-lg-4 col-md-4 col-12">
                                 <div class="form-group color-option">
                                     <label class="title-label" for="size">Выбрать цвет</label>
@@ -92,7 +92,7 @@
                                     </select>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="bottom-content">
                             <div class="row align-items-end">
                                 <div class="col-lg-4 col-md-4 col-12">

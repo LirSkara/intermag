@@ -120,7 +120,7 @@
                 </div>
               </li>
               <li data-aos="fade-up" data-aos-delay="400">
-              @foreach($main_carousel as $carousel)
+              @foreach($main_faq as $faq)
                 <div class="alert alert-success" role="alert">
                 <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed"><i class="bx bx-chevron-down icon-show">{{$faq->question}}</i><i class="bx bx-chevron-up icon-close"></i></a>
                 <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
@@ -129,7 +129,7 @@
                 </div>
               </li>
             </ul>
-            
+            @endforeach
           </div>
   
         </div>
