@@ -34,7 +34,7 @@
                         <div class="product-info">
                             <span class="category">{{$item->tags}}</span>
                             <h4 class="title">
-                                <a href="product-grids.html">{{$item->name_tovar}}</a>
+                                <a href="/product/{{$item->id}}">{{$item->name_tovar}}</a>
                             </h4>
                             <ul class="review">
                                 <li><i class="lni lni-star-filled"></i></li>

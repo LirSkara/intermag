@@ -10,6 +10,7 @@ use App\Models\AdvertisingTwo;
 use App\Models\AdvertisingThree;
 use App\Models\CategoryModel;
 use App\Models\HotLine;
+use App\Models\ProductModel;
 use Illuminate\Http\Request;
 class MainController extends Controller
 {
@@ -29,13 +30,14 @@ class MainController extends Controller
         $main_faq = new MainFaq;
         return view('FAQ', ['main_faq' => $main_faq ->all()]);
     }
-    
-    public function product(){
-        return view('product');
-    }
 
     public function about(){
         return view('about');
     }
-
+    public function product($id)
+    {
+        $Product_Model = ProductModel::find($id)->first();
+        $Product_Model_count = ProductModel::count();
+        return view('product', ['Product_Model' => $Product_Model, 'Product_Model_count'=>$Product_Model_count]);
+    }
 }

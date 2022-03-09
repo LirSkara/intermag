@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\CategoryModel;
 use App\Models\HotLine;
+use App\Models\ProductModel;
 use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
@@ -22,5 +23,7 @@ class Controller extends BaseController
         $hot_line_count = HotLine::count();
         View::share('hot_line', $hot_line);
         View::share('hot_line_count', $hot_line_count);
+
+     
     }
 }
