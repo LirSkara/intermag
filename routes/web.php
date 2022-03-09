@@ -21,7 +21,9 @@ Route::get('/main_tovar', [AdminController::class, 'main_tovar'])->name('main_to
 Route::post('/add_tovar', [AdminController::class, 'add_tovar']);
 Route::post('/edit_tovar/{id}', [AdminController::class, 'edit_tovar']);
 Route::get('/delete_tovar/{id}', [AdminController::class, 'delete_tovar']);
+Route::get('/approve/{id}', [AdminController::class, 'approve']);
 Route::get('/details_product/{id}', [AdminController::class, 'details_product']);
+Route::get('/approve_all', [AdminController::class, 'approve_all']);
 
 Route::get('/main_faq', [AdminController::class, 'main_faq'])->name('main_faq');
 Route::post('/add_faq', [AdminController::class, 'add_faq']);
@@ -30,6 +32,9 @@ Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
 Route::get('/delete_category/{id}', [AdminController::class, 'delete_category_process']);
 
+Route::post('/addpunkt/{id}', [AdminController::class, 'addpunkt']);
+Route::post('/edit_punkt/{id}', [AdminController::class, 'edit_punkt']);
+Route::get('/delete_punkt/{id}', [AdminController::class, 'delete_punkt']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/exit', [AuthController::class, 'exit']);

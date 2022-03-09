@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\CategoryModel;
+use App\Models\PunktsModel;
 use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
@@ -15,6 +16,8 @@ class Controller extends BaseController
     public function __construct()
     {
         $categories = new CategoryModel();
-        View::share('categories', $categories->get());
+        View::share('categories', $categories->all());
+        $punkts = new PunktsModel();
+        View::share('punkts', $punkts->all());
     }
 }

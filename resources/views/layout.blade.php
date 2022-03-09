@@ -51,12 +51,10 @@
                                 <div class="search-select">
                                     <div class="select-position">
                                         <select id="select1">
-                                            <option selected>Все</option>
-                                            <option value="1">Опция 01</option>
-                                            <option value="2">Опция 02</option>
-                                            <option value="3">Опция 03</option>
-                                            <option value="4">Опция 04</option>
-                                            <option value="5">Опция 05</option>
+                                            <option selected disabled>Все</option>
+                                            @foreach($categories as $item)
+                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -172,7 +170,16 @@
                             <span class="cat-button"><i class="lni lni-menu"></i>Все категории</span>
                             <ul class="sub-category">
                                 @foreach($categories as $item)
-                                <li><a href="product-grids.html">{{$item->name}}</a></li>
+                                    <li>
+                                        @if($test = $punkts->where('categories', $item->id)->count() != 0)
+                                            <ul class="inner-sub-category">
+                                                @foreach($punkts->where('categories', $item->id) as $punkt)
+                                                    <li><a href="product-grids.html">{{$punkt->name}}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+                                        <a href="product-grids.html">{{$item->name}} @if($test == 1)<i class="lni lni-chevron-right"></i>@endif</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         </div>

@@ -6,6 +6,7 @@ use App\Models\MainCarousel;
 use App\Models\ProductModel;
 use App\Models\MainFaq;
 use App\Models\CategoryModel;
+use App\Models\PunktsModel;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -18,15 +19,15 @@ class AdminController extends Controller
     }
 
     public function category(){
-
         $reviews = new CategoryModel();
-        return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get()]);
+        $punkts = new PunktsModel();
+        return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get(), 'punkts' => $punkts->all()]);
     }
 
     public function category_process(Request $data){
 
         $valid = $data->validate([
-        'name' => ['required', 'min:5', 'max:15', 'string']
+        'name' => ['required', 'min:3', 'max:15', 'string']
          ]);
 
         $review = new CategoryModel();
@@ -39,7 +40,7 @@ class AdminController extends Controller
     public function edit_category_process($id, Request $data)
     {
         $valid = $data->validate([
-        'name' => ['required', 'min:5', 'max:15', 'string']
+            'name' => ['required', 'min:3', 'max:15', 'string']
         ]);
 
         $review = CategoryModel::find($id);
@@ -58,6 +59,38 @@ class AdminController extends Controller
     public function main_carousel(){
         $main_carousel = new MainCarousel;
         return view('admin.main_carousel', ['main_carousel' => $main_carousel->all()]);
+    }
+
+    public function addpunkt($id, Request $data){
+        $valid = $data->validate([
+            'name' => ['required', 'min:3', 'max:25', 'string']
+        ]);
+
+        $punkt = new PunktsModel();
+        $punkt->categories = $id;   
+        $punkt->name = $data->input('name');
+        $punkt->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function edit_punkt($id, Request $data)
+    {
+        $valid = $data->validate([
+            'name' => ['required', 'min:3', 'max:15', 'string']
+        ]);
+
+        $punkt = PunktsModel::find($id);
+        $punkt->name = $data->input('name');
+        $punkt->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function delete_punkt($id)
+    {
+        PunktsModel::find($id)->delete();
+        return redirect()->route('a_category');
     }
 
     public function add_carousel(Request $data){
@@ -127,7 +160,9 @@ class AdminController extends Controller
 
     public function main_tovar(){
         $tovar = new ProductModel();
-        return view('admin.main_tovar', ['tovar' => $tovar->all()]);
+        $category = new CategoryModel();
+        $punkts = new PunktsModel();
+        return view('admin.main_tovar', ['tovar' => $tovar->all(), 'category' => $category->all(), 'punkts' => $punkts->all()]);
     }
 
     public function add_tovar(Request $data){
@@ -151,6 +186,8 @@ class AdminController extends Controller
         $product->price = $data->input('price');
         $product->old_price = '';
         $product->description = $data->input('description');
+        $product->remains = $data->input('remains');
+        $product->category = $data->input('category');
         $product->status = 0;
         $product->save();
 
@@ -199,6 +236,21 @@ class AdminController extends Controller
         return redirect()->route('main_tovar');
     }
 
+    public function approve($id){
+        $tovar = ProductModel::find($id);
+        $tovar->status = 1;
+        $tovar->save();
+        return redirect()->route('main_tovar');
+    }
+    
+    public function approve_all(){
+        $tovar = ProductModel::where('status', '=', 0)->get();
+        foreach($tovar as $item) {
+            $item->status = 1;
+            $item->save();
+        }
+        return redirect()->route('main_tovar');
+    }
 
     public function details_product($id){
         $tovar = ProductModel::find($id);
