@@ -28,6 +28,11 @@ Route::post('/add_faq', [AdminController::class, 'add_faq']);
 Route::post('/exit_faq/{id}', [AdminController::class, 'exit_faq']);
 Route::get('/delete_faq/{id}', [AdminController::class, 'delete_faq']);
 
+Route::get('/icons', [AdminController::class, 'icons'])->name('icons');
+Route::post('/add_icons', [AdminController::class, 'add_icons']);
+Route::post('/exit_icons/{id}', [AdminController::class, 'exit_icons']);
+Route::get('/delete_icons/{id}', [AdminController::class, 'delete_icons']);
+
 Route::get('/category', [AdminController::class, 'category'])->name('a_category');
 Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);

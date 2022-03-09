@@ -6,7 +6,7 @@ use App\Models\MainCarousel;
 use App\Models\ProductModel;
 use App\Models\MainFaq;
 use App\Models\CategoryModel;
-
+use App\Models\icons;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
@@ -444,8 +444,57 @@ public function exit_advertisingThree(Request $data, $id){
 
     return redirect()->route('advertising_three');
 }  
-public function delete_advertisingThree($id){
-    AdvertisingThree::find($id)->delete();
-    return redirect()->route('advertising_three');
+    public function delete_advertisingThree($id){
+        AdvertisingThree::find($id)->delete();
+        return redirect()->route('advertising_three');
+    }
+   
+public function icons(){
+    $icons = new icons();
+    return view ('admin.icons' , ['icons' => $icons->all()]);
 }
+public function add_icons(Request $data){
+    $valid = $data->validate([
+        'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'link' => ['required']
+     ]);
+
+    $file = $data->file('img');
+    $upload_folder = 'public/icons/'; //Создается автоматически
+    $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+    Storage::putFileAs($upload_folder, $file, $filename); 
+
+    $icons = new icons();
+    $icons->img = $filename;
+    $icons->link = $data->input('link');
+    $icons->save();
+    return redirect()->route('icons');
+}
+public function exit_icons(Request $data, $id){
+    $valid = $data->validate([
+        'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'link' => ['required']
+    ]); 
+    
+    $icons = icons::find($id);
+    if($data->file('img') != '') {
+        $upload_folder = 'public/icons/'; //Создается автоматически
+        $file = $data->file('img');
+        $filename = $file->getClientOriginalName();
+        Storage::delete($upload_folder . '/' . $icons->img);
+        Storage::putFileAs($upload_folder, $file, $filename);    
+        $icons->img = $filename;
+        Storage::putFileAs($upload_folder, $file, $filename); 
+    } else {
+        $icons->img = $icons->img;
+    }
+    $icons->link = $data->input('link');
+    $icons->save();
+
+    return redirect()->route('icons');
+    }  
+    public function delete_icons($id){
+        icons::find($id)->delete();
+        return redirect()->route('icons');
+    }
 }

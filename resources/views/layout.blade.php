@@ -240,22 +240,23 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Nav Social -->
                     <div class="nav-social">
+                    @if($icons_count != 0)
                         <h5 class="title">Следуйте за нами:</h5>
                         <ul>
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>
+                                <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a>
+                                <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>                            </li>
+                            <li>
+                                 <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-instagram"></i></a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"><i class="lni lni-skype"></i></a>
+                                 <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
                             </li>
                         </ul>
                     </div>
+                    @endif
                     <!-- End Nav Social -->
                 </div>
             </div>
