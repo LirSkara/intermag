@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
 use App\Models\AdvertisingTwo;
 use App\Models\AdvertisingThree;
+use App\Models\HotLine;
 
 class AdminController extends Controller
 {
@@ -427,5 +428,37 @@ public function exit_advertisingThree(Request $data, $id){
 public function delete_advertisingThree($id){
     AdvertisingThree::find($id)->delete();
     return redirect()->route('advertising_three');
+}
+public function hot_line(){
+    $hot_line = new HotLine();
+    return view ('admin.hot_line' , ['hot_line' => $hot_line->all()]);
+}
+public function hot_line_process(Request $data){
+    $valid = $data->validate([
+        'tel' => ['required'],
+        'description' => ['required'],
+     ]); 
+    $hot_line = new HotLine();
+    $hot_line->tel = $data->input('tel');
+    $hot_line->description = $data->input('description');
+    $hot_line->save();
+    return redirect()->route('hot_line');
+}
+public function exit_hot_line(Request $data, $id){
+    $valid = $data->validate([
+        'tel' => ['required'],
+        'description' => ['required']
+    ]); 
+    
+    $hot_line = HotLine::find($id);
+    $hot_line->tel = $data->input('tel');
+    $hot_line->description = $data->input('description');
+    $hot_line->save();
+
+    return redirect()->route('hot_line');
+} 
+public function delete_hot_line($id){
+    HotLine::find($id)->delete();
+    return redirect()->route('hot_line');
 }
 }

@@ -523,6 +523,7 @@ class ComposerStaticInit7037189525c84ad0e4b97de280fcab91
         'App\\Models\\AdvertisingThree' => __DIR__ . '/../..' . '/app/Models/AdvertisingThree.php',
         'App\\Models\\AdvertisingTwo' => __DIR__ . '/../..' . '/app/Models/AdvertisingTwo.php',
         'App\\Models\\CategoryModel' => __DIR__ . '/../..' . '/app/Models/CategoryModel.php',
+        'App\\Models\\HotLine' => __DIR__ . '/../..' . '/app/Models/HotLine.php',
         'App\\Models\\MainCarousel' => __DIR__ . '/../..' . '/app/Models/MainCarousel.php',
         'App\\Models\\MainFaq' => __DIR__ . '/../..' . '/app/Models/MainFaq.php',
         'App\\Models\\ProductModel' => __DIR__ . '/../..' . '/app/Models/ProductModel.php',

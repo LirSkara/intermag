@@ -73,12 +73,14 @@
                     </div>
                     <div class="col-lg-4 col-md-2 col-5">
                         <div class="middle-right-area">
-                            <div class="nav-hotline">
-                                <i class="lni lni-phone"></i>
-                                <h3>Горячая линия:
-                                    <span>(+100) 123 456 7890</span>
-                                </h3>
-                            </div>
+                            @if($hot_line_count == 1)
+                                <div class="nav-hotline">   
+                                    <i class="lni lni-phone"></i>
+                                    <h3>Горячая линия:
+                                        <span>{{$hot_line->tel}}</span>
+                                    </h3>
+                                </div>
+                            @endif
                             <div class="navbar-cart">
                                 <div class="wishlist">
                                     <a href="javascript:void(0)">
@@ -146,8 +148,8 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="d-flex flex-column">
-                                            <a href="#" class="text-dark mb-2 fs-6">Вход</a>
-                                            <a href="#" class="text-dark fs-6">Регистрация</a>
+                                            <a href="/login" class="text-dark mb-2 fs-6">Вход</a>
+                                            <a href="/register" class="text-dark fs-6">Регистрация</a>
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->

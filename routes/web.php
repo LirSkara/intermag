@@ -65,4 +65,8 @@ Route::post('/add_advertising_three', [AdminController::class, 'add_advertising_
 Route::post('/exit_advertisingThree/{id}', [AdminController::class, 'exit_advertisingThree']);
 Route::get('/delete_advertisingThree/{id}', [AdminController::class, 'delete_advertisingThree']);
 
+Route::get('/hot_line', [AdminController::class, 'hot_line'])->name('hot_line');  
+Route::post('/add_hot_line', [AdminController::class, 'hot_line_process']);
+Route::post('/exit_hot_line/{id}', [AdminController::class, 'exit_hot_line']);
+Route::get('/delete_hot_line/{id}', [AdminController::class, 'delete_hot_line']);
 
