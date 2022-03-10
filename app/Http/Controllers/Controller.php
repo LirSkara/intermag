@@ -7,6 +7,10 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\CategoryModel;
+
+use App\Models\PunktsModel;
+use App\Models\HotLine;
+use App\Models\ProductModel;
 use Illuminate\Support\Facades\View;
 
 class Controller extends BaseController
@@ -15,6 +19,13 @@ class Controller extends BaseController
     public function __construct()
     {
         $categories = new CategoryModel();
+        View::share('categories', $categories->all());
+        $punkts = new PunktsModel();
+        View::share('punkts', $punkts->all());
         View::share('categories', $categories->get());
+        $hot_line = HotLine::find(1);
+        View::share('hot_line', $hot_line);
+        $hot_line_count = HotLine::count();
+        View::share('hot_line_count', $hot_line_count);
     }
 }

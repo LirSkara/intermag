@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-        <!-- CSS only -->
+    <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
-    <link rel="stylesheet" href="assets/css/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/LineIcons.3.0.css" />
+    <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
+    <link rel="stylesheet" href="/assets/css/glightbox.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                     <div class="col-lg-3 col-md-3 col-7">
                         <!-- Start Header Logo -->
                         <a class="navbar-brand" href="/">
-                            <img src="assets/images/logo/logo.svg" alt="Logo">
+                            <img src="/assets/images/logo/logo.svg" alt="Logo">
                         </a>
                         <!-- End Header Logo -->
                     </div>
@@ -51,12 +51,10 @@
                                 <div class="search-select">
                                     <div class="select-position">
                                         <select id="select1">
-                                            <option selected>Все</option>
-                                            <option value="1">Опция 01</option>
-                                            <option value="2">Опция 02</option>
-                                            <option value="3">Опция 03</option>
-                                            <option value="4">Опция 04</option>
-                                            <option value="5">Опция 05</option>
+                                            <option selected disabled>Все</option>
+                                            @foreach($categories as $item)
+                                                <option value="{{$item->id}}">{{$item->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -73,12 +71,14 @@
                     </div>
                     <div class="col-lg-4 col-md-2 col-5">
                         <div class="middle-right-area">
+                            @if($hot_line_count == 1)
                             <div class="nav-hotline">
                                 <i class="lni lni-phone"></i>
                                 <h3>Горячая линия:
-                                    <span>(+100) 123 456 7890</span>
+                                    <span>{{$hot_line->tel}}</span>
                                 </h3>
                             </div>
+                            @endif
                             <div class="navbar-cart">
                                 <div class="wishlist">
                                     <a href="javascript:void(0)">
@@ -102,8 +102,7 @@
                                                 <a href="javascript:void(0)" class="remove" title="Remove this item"><i
                                                         class="lni lni-close"></i></a>
                                                 <div class="cart-img-head">
-                                                    <a class="cart-img" href="product-details.html"><img
-                                                            src="assets/images/header/cart-items/item1.jpg" alt="#"></a>
+                                                    <a class="cart-img" href="product-details.html"><img src="assets/images/header/cart-items/item1.jpg" alt="#"></a>
                                                 </div>
 
                                                 <div class="content">
@@ -116,8 +115,7 @@
                                                 <a href="javascript:void(0)" class="remove" title="Remove this item"><i
                                                         class="lni lni-close"></i></a>
                                                 <div class="cart-img-head">
-                                                    <a class="cart-img" href="product-details.html"><img
-                                                            src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
+                                                    <a class="cart-img" href="product-details.html"><img src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
                                                 </div>
                                                 <div class="content">
                                                     <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
@@ -136,8 +134,8 @@
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
-                                    
-                                    
+
+
                                 </div>
                                 <div style="margin-right: 12px" class="cart-items">
                                     <a href="javascript:void(0)" class="main-btn">
@@ -146,14 +144,14 @@
                                     <!-- Shopping Item -->
                                     <div class="shopping-item">
                                         <div class="d-flex flex-column">
-                                            <a href="#" class="text-dark mb-2 fs-6">Вход</a>
-                                            <a href="#" class="text-dark fs-6">Регистрация</a>
+                                            <a href="/login" class="text-dark mb-2 fs-6">Вход</a>
+                                            <a href="/register" class="text-dark fs-6">Регистрация</a>
                                         </div>
                                     </div>
                                     <!--/ End Shopping Item -->
-                                    
+
                                 </div>
-                                
+
 
                             </div>
                         </div>
@@ -172,16 +170,23 @@
                             <span class="cat-button"><i class="lni lni-menu"></i>Все категории</span>
                             <ul class="sub-category">
                                 @foreach($categories as $item)
-                                <li><a href="product-grids.html">{{$item->name}}</a></li>
+                                <li>
+                                    @if($test = $punkts->where('categories', $item->id)->count() != 0)
+                                    <ul class="inner-sub-category">
+                                        @foreach($punkts->where('categories', $item->id) as $punkt)
+                                        <li><a href="product-grids.html">{{$punkt->name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                    <a href="product-grids.html">{{$item->name}} @if($test == 1)<i class="lni lni-chevron-right"></i>@endif</a>
+                                </li>
                                 @endforeach
                             </ul>
                         </div>
                         <!-- End Mega Category Menu -->
                         <!-- Start Navbar -->
                         <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
@@ -192,9 +197,7 @@
                                         <a href="/" class="active" aria-label="Toggle navigation">Главная</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                            data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Страницы</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Страницы</a>
                                         <ul class="sub-menu collapse" id="submenu-1-2">
                                             <li class="nav-item"><a href="/about">О нас</a></li>
                                             <li class="nav-item"><a href="/FAQ">Часто задаваемые вопросы</a></li>
@@ -205,9 +208,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                            data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Магазин</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Магазин</a>
                                         <ul class="sub-menu collapse" id="submenu-1-3">
                                             <li class="nav-item"><a href="product-grids.html">Сетка магазина</a></li>
                                             <li class="nav-item"><a href="product-list.html">Список магазинов</a></li>
@@ -217,9 +218,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                            data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
-                                            aria-expanded="false" aria-label="Toggle navigation">Блог</a>
+                                        <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Блог</a>
                                         <ul class="sub-menu collapse" id="submenu-1-4">
                                             <li class="nav-item"><a href="blog-grid-sidebar.html"> Боковая панель сетки блога</a>
                                             </li>
@@ -232,7 +231,8 @@
                                         <a href="contact.html" aria-label="Toggle navigation"> Контакты</a>
                                     </li>
                                 </ul>
-                            </div> <!-- navbar collapse -->
+                            </div>
+                            <!-- navbar collapse -->
                         </nav>
                         <!-- End Navbar -->
                     </div>
@@ -240,20 +240,16 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <!-- Start Nav Social -->
                     <div class="nav-social">
-                    @if($icons_count != 0)
-                        <h5 class="title">Следуйте за нами:</h5>
+                        @if($icons_count != 0)
+                        <h5 class="title">Подпишитесь на нас:</h5>
                         <ul>
+                            @foreach($icons as $icon)
                             <li>
-                                <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
+                                <a href="{{$icon->link}}">
+                                    <img style="width:70%;" src="storage/icons/{{$icon->img}}" alt="...">
+                                </a>
                             </li>
-                            <li>
-                                <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>                            </li>
-                            <li>
-                                 <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
-                            </li>
-                            <li>
-                                 <a href="javascript:void(0)" style="background-image: url(storage/icons/{{$icons->img}});"></a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                     @endif
@@ -277,7 +273,7 @@
                         <div class="col-lg-3 col-md-4 col-12">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/images/logo/white-logo.svg" alt="#">
+                                    <img src="/assets/images/logo/white-logo.svg" alt="#">
                                 </a>
                             </div>
                         </div>
@@ -288,12 +284,12 @@
                                     <span>Получайте всю самую свежую информацию, информацию о продажах и предложениях.</span>
                                 </h4>
                                 <div class="newsletter-form-head">
-                                        <form action="#" method="get" target="_blank" class="newsletter-form mt-3">
-                                            <input name="EMAIL" placeholder="Введите Email" type="email">
-                                            <div class="button">
-                                                <button class="btn">Подписаться<span class="dir-part"></span></button>
-                                            </div>
-                                        </form>
+                                    <form action="#" method="get" target="_blank" class="newsletter-form mt-3">
+                                        <input name="EMAIL" placeholder="Введите Email" type="email">
+                                        <div class="button">
+                                            <button class="btn">Подписаться<span class="dir-part"></span></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -387,7 +383,7 @@
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
                                 <span>Способ оплаты:</span>
-                                <img src="assets/images/footer/credit-cards-footer.png" alt="#">
+                                <img src="/assets/images/footer/credit-cards-footer.png" alt="#">
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
@@ -397,13 +393,12 @@
                         </div>
                         <div class="col-lg-4 col-12">
                             <ul class="socila">
-                                <li>
-                                    <span>Мы в соц.сетях:</span>
+                                @foreach($icons as $icon)
+                                <li class="bg-light rounded-circle"><a class="" href="{{$icon->link}}">
+                                        <img style="width:75%;" src="storage/icons/{{$icon->img}}" alt="...">
+                                    </a>
                                 </li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -420,10 +415,10 @@
     </a>
 
     <!-- ========================= JS here ========================= -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/tiny-slider.js"></script>
-    <script src="assets/js/glightbox.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/tiny-slider.js"></script>
+    <script src="/assets/js/glightbox.min.js"></script>
+    <script src="/assets/js/main.js"></script>
     <script type="text/javascript">
         //========= Hero Slider 
         tns({
@@ -465,7 +460,7 @@
         });
     </script>
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

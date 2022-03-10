@@ -51,7 +51,7 @@
                                 <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="/exit_advertisingThree/{{$item->id}}" method="POST" enctype="multipart/form-data">
+                                <form action="/exit_advertisingThre/{{$item->id}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                     <div>
                                         <label>Выберите фото</label>
