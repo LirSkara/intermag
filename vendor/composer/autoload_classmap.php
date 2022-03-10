@@ -32,6 +32,7 @@ return array(
     'App\\Models\\PunktsModel' => $baseDir . '/app/Models/PunktsModel.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\advertising' => $baseDir . '/app/Models/advertising.php',
+    'App\\Models\\icons' => $baseDir . '/app/Models/icons.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
