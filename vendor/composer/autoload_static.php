@@ -520,17 +520,15 @@ class ComposerStaticInit7037189525c84ad0e4b97de280fcab91
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-
         'App\\Models\\AdvertisingThree' => __DIR__ . '/../..' . '/app/Models/AdvertisingThree.php',
         'App\\Models\\AdvertisingTwo' => __DIR__ . '/../..' . '/app/Models/AdvertisingTwo.php',
         'App\\Models\\CategoryModel' => __DIR__ . '/../..' . '/app/Models/CategoryModel.php',
         'App\\Models\\HotLine' => __DIR__ . '/../..' . '/app/Models/HotLine.php',
         'App\\Models\\MainCarousel' => __DIR__ . '/../..' . '/app/Models/MainCarousel.php',
         'App\\Models\\MainFaq' => __DIR__ . '/../..' . '/app/Models/MainFaq.php',
+        'App\\Models\\PayMethod' => __DIR__ . '/../..' . '/app/Models/PayMethod.php',
         'App\\Models\\ProductModel' => __DIR__ . '/../..' . '/app/Models/ProductModel.php',
-
         'App\\Models\\PunktsModel' => __DIR__ . '/../..' . '/app/Models/PunktsModel.php',
-
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\advertising' => __DIR__ . '/../..' . '/app/Models/advertising.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

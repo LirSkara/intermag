@@ -395,7 +395,9 @@
                         <div class="col-lg-4 col-12">
                             <div class="payment-gateway">
                                 <span>Способ оплаты:</span>
-                                <img src="/assets/images/footer/credit-cards-footer.png" alt="#">
+                                @foreach ($method_pay as $pay)
+                                    <img style="width: 40px; border-radius: 5px;" src="/storage/method_pay/{{$pay->img}}" alt="">
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">

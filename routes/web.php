@@ -78,3 +78,8 @@ Route::post('/add_hot_line', [AdminController::class, 'hot_line_process']);
 Route::post('/exit_hot_line/{id}', [AdminController::class, 'exit_hot_line']);
 Route::get('/delete_hot_line/{id}', [AdminController::class, 'delete_hot_line']);
 
+Route::get('/method_pay', [AdminController::class, 'method_pay'])->name('method_pay');  
+Route::post('/add_method_pay', [AdminController::class, 'method_pay_process']);
+Route::post('/exit_method_pay/{id}', [AdminController::class, 'exit_method_pay']);
+Route::get('/delete_method_pay/{id}', [AdminController::class, 'delete_method_pay']);
+

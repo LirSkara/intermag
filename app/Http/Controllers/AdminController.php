@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MainCarousel;
 use App\Models\ProductModel;
 use App\Models\MainFaq;
+use App\Models\PayMethod;
 use App\Models\CategoryModel;
 use App\Models\PunktsModel;
 
@@ -537,5 +538,54 @@ class AdminController extends Controller
     public function delete_hot_line($id){
         HotLine::find($id)->delete();
         return redirect()->route('hot_line');
+    }
+    public function method_pay(){
+        $method_pay = new PayMethod();
+        return view ('admin.method_pay' , ['method_pay' => $method_pay->all()]);
+    }
+
+    public function method_pay_process(Request $data){
+        $valid = $data->validate([
+            'img' => ['required'],
+            'title' => ['required'],
+        ]); 
+        $file = $data->file('img');
+        $upload_folder = 'public/method_pay/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+        $method_pay = new PayMethod();
+        $method_pay->img = $filename;
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+        return redirect()->route('method_pay');
+        
+    }
+
+    public function exit_method_pay(Request $data, $id){
+        $valid = $data->validate([
+            'title' => ['required'],
+        ]); 
+
+        $method_pay = PayMethod::find($id);
+        if($data->file('img') != '') {
+            $upload_folder = 'public/method_pay/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $method_pay->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $method_pay->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $method_pay->img = $method_pay->img;
+        }
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+
+        return redirect()->route('method_pay');
+    } 
+
+    public function delete_method_pay($id){
+        PayMethod::find($id)->delete();
+        return redirect()->route('method_pay');
     }
 }

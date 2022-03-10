@@ -23,11 +23,11 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\AdvertisingThree' => $baseDir . '/app/Models/AdvertisingThree.php',
     'App\\Models\\AdvertisingTwo' => $baseDir . '/app/Models/AdvertisingTwo.php',
-
     'App\\Models\\CategoryModel' => $baseDir . '/app/Models/CategoryModel.php',
     'App\\Models\\HotLine' => $baseDir . '/app/Models/HotLine.php',
     'App\\Models\\MainCarousel' => $baseDir . '/app/Models/MainCarousel.php',
     'App\\Models\\MainFaq' => $baseDir . '/app/Models/MainFaq.php',
+    'App\\Models\\PayMethod' => $baseDir . '/app/Models/PayMethod.php',
     'App\\Models\\ProductModel' => $baseDir . '/app/Models/ProductModel.php',
     'App\\Models\\PunktsModel' => $baseDir . '/app/Models/PunktsModel.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',

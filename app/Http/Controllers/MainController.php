@@ -10,6 +10,7 @@ use App\Models\AdvertisingTwo;
 use App\Models\AdvertisingThree;
 use App\Models\CategoryModel;
 use App\Models\HotLine;
+use App\Models\PayMethod;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
 class MainController extends Controller
