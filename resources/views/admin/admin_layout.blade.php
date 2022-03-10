@@ -344,7 +344,7 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="/icons">
               <i class="bi bi-circle"></i><span>Соц сети</span>
             </a>
           </li>
@@ -375,22 +375,22 @@
       </li><!-- End Charts Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="">
+          <i class="bi bi-gem"></i><span>Иконки</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="icons-bootstrap.html">
+            <a href="">
               <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
             </a>
           </li>
           <li>
-            <a href="icons-remix.html">
+            <a href="">
               <i class="bi bi-circle"></i><span>Remix Icons</span>
             </a>
           </li>
           <li>
-            <a href="icons-boxicons.html">
+            <a href="">
               <i class="bi bi-circle"></i><span>Boxicons</span>
             </a>
           </li>

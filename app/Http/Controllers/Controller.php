@@ -10,6 +10,7 @@ use App\Models\CategoryModel;
 
 use App\Models\PunktsModel;
 use App\Models\HotLine;
+use App\Models\PayMethod;
 use App\Models\ProductModel;
 use Illuminate\Support\Facades\View;
 
@@ -27,5 +28,9 @@ class Controller extends BaseController
         View::share('hot_line', $hot_line);
         $hot_line_count = HotLine::count();
         View::share('hot_line_count', $hot_line_count);
+        $method_pay =  new PayMethod();
+        View::share('method_pay', $method_pay->all());
+        $method_pay_count = PayMethod::count();
+        View::share('method_pay_count', $method_pay_count);
     }
 }

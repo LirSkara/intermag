@@ -14,7 +14,7 @@
                     </ol>
                 </nav>
             </div>
-                <button class="btn btn-carousel ms-auto" data-bs-toggle="modal" data-bs-target="#addfaq">Добавить FAQ</button>
+        <button class="btn btn-carousel ms-auto" data-bs-toggle="modal" data-bs-target="#addfaq">Добавить FAQ</button>
             </div><!-- End Page Title -->
         </div>
             <!-- Modal -->

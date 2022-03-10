@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\MainCarousel;
 use App\Models\ProductModel;
 use App\Models\MainFaq;
+use App\Models\PayMethod;
 use App\Models\CategoryModel;
+use App\Models\icons;
 use App\Models\PunktsModel;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
@@ -442,8 +443,7 @@ class AdminController extends Controller
     public function advertising_three(){
         $advertising = new AdvertisingThree();
         return view ('admin.advertising_three' , ['advertising' => $advertising->all()]);
-    }
-
+    }  
     public function add_advertising_three(Request $data){
         $valid = $data->validate([
             'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
@@ -500,11 +500,63 @@ class AdminController extends Controller
         return redirect()->route('advertising_three');
     }  
 
+
     public function delete_advertisingThree($id){
         AdvertisingThree::find($id)->delete();
         return redirect()->route('advertising_three');
     }
+public function icons(){
+    $icons = new icons();
+    return view ('admin.icons' , ['icons' => $icons->all()]);
+}
+public function add_icons(Request $data){
+    $valid = $data->validate([
+        'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'link' => ['required']
+     ]);
 
+    $file = $data->file('img');
+    $upload_folder = 'public/icons/'; //Создается автоматически
+    $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+    Storage::putFileAs($upload_folder, $file, $filename); 
+
+    $icons = new icons();
+    $icons->img = $filename;
+    $icons->link = $data->input('link');
+    $icons->save();
+    return redirect()->route('icons');
+}
+public function exit_icons($id, Request $data){
+
+    $valid = $data->validate([
+        'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+        'link' => ['required']
+    ]); 
+    
+    $icons = icons::find($id);
+
+        if($data->file('img') != '') {
+            $upload_folder = 'public/icons/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $icons->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $icons->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $icons->img = $icons->img;
+        }
+
+        $icons->link = $data->input('link');
+        $icons->save();
+
+        return redirect()->route('icons');
+    }
+
+    public function delete_icons($id){
+        icons::find($id)->delete();
+        return redirect()->route('icons');
+    }
     public function hot_line(){
         $hot_line = new HotLine();
         return view ('admin.hot_line' , ['hot_line' => $hot_line->all()]);
@@ -539,5 +591,54 @@ class AdminController extends Controller
     public function delete_hot_line($id){
         HotLine::find($id)->delete();
         return redirect()->route('hot_line');
+    }
+    public function method_pay(){
+        $method_pay = new PayMethod();
+        return view ('admin.method_pay' , ['method_pay' => $method_pay->all()]);
+    }
+
+    public function method_pay_process(Request $data){
+        $valid = $data->validate([
+            'img' => ['required'],
+            'title' => ['required'],
+        ]); 
+        $file = $data->file('img');
+        $upload_folder = 'public/method_pay/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+        $method_pay = new PayMethod();
+        $method_pay->img = $filename;
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+        return redirect()->route('method_pay');
+        
+    }
+
+    public function exit_method_pay(Request $data, $id){
+        $valid = $data->validate([
+            'title' => ['required'],
+        ]); 
+
+        $method_pay = PayMethod::find($id);
+        if($data->file('img') != '') {
+            $upload_folder = 'public/method_pay/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $method_pay->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $method_pay->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $method_pay->img = $method_pay->img;
+        }
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+
+        return redirect()->route('method_pay');
+    } 
+
+    public function delete_method_pay($id){
+        PayMethod::find($id)->delete();
+        return redirect()->route('method_pay');
     }
 }

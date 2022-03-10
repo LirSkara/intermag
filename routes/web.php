@@ -30,6 +30,11 @@ Route::post('/add_faq', [AdminController::class, 'add_faq']);
 Route::post('/exit_faq/{id}', [AdminController::class, 'exit_faq']);
 Route::get('/delete_faq/{id}', [AdminController::class, 'delete_faq']);
 
+Route::get('/icons', [AdminController::class, 'icons'])->name('icons');
+Route::post('/add_icons', [AdminController::class, 'add_icons']);
+Route::post('/exit_icons/{id}', [AdminController::class, 'exit_icons']);
+Route::get('/delete_icons/{id}', [AdminController::class, 'delete_icons']);
+
 Route::get('/category', [AdminController::class, 'category'])->name('a_category');
 Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
@@ -79,4 +84,9 @@ Route::post('/exit_hot_line/{id}', [AdminController::class, 'exit_hot_line']);
 Route::get('/delete_hot_line/{id}', [AdminController::class, 'delete_hot_line']);
 Route::get('/basket', [MainController::class, 'basket'])->name('basket');
 
+
+Route::get('/method_pay', [AdminController::class, 'method_pay'])->name('method_pay');  
+Route::post('/add_method_pay', [AdminController::class, 'method_pay_process']);
+Route::post('/exit_method_pay/{id}', [AdminController::class, 'exit_method_pay']);
+Route::get('/delete_method_pay/{id}', [AdminController::class, 'delete_method_pay']);
 
