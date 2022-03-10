@@ -77,4 +77,6 @@ Route::get('/hot_line', [AdminController::class, 'hot_line'])->name('hot_line');
 Route::post('/add_hot_line', [AdminController::class, 'hot_line_process']);
 Route::post('/exit_hot_line/{id}', [AdminController::class, 'exit_hot_line']);
 Route::get('/delete_hot_line/{id}', [AdminController::class, 'delete_hot_line']);
+Route::get('/basket', [MainController::class, 'basket'])->name('basket');
+
 

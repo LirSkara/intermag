@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/assets/css/LineIcons.3.0.css" />
     <link rel="stylesheet" href="/assets/css/tiny-slider.css" />
     <link rel="stylesheet" href="/assets/css/glightbox.min.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css"/>
 </head>
 
 <body>
@@ -87,7 +87,7 @@
                                     </a>
                                 </div>
                                 <div style="margin-right: 12px" class="cart-items">
-                                    <a href="javascript:void(0)" class="main-btn">
+                                    <a href="/basket" class="main-btn">
                                         <i class="lni lni-cart"></i>
                                         <span class="total-items">2</span>
                                     </a>

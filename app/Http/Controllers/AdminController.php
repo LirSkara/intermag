@@ -177,6 +177,8 @@ class AdminController extends Controller
             'tags' => ['required'],
             'price' => ['required'],
             'description' => ['required'],
+            'category' => ['required'],
+            'remains' => ['required'],
         ]); 
 
         $file = $data->file('img');

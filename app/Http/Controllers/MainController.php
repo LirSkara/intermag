@@ -23,7 +23,8 @@ class MainController extends Controller
         $advertising_three =  new AdvertisingThree();
         $advertising_three_count =  AdvertisingThree::count();
         $reviews = new CategoryModel();
-        return view('welcome', ['main_carousel' => $main_carousel->all(), 'advertising_one' => $advertising->first(), 'advertising_two' => $advertising_two->first(), 'advertising_three' => $advertising_three->first(),'reviews' => $reviews->orderBy('id','desc')->get(), 'advertising_count' => $advertising_count, 'advertising_two_count' => $advertising_two_count, 'advertising_three_count' => $advertising_three_count,]);
+        $tovar = ProductModel::latest()->limit('10')->get();
+        return view('welcome', ['main_carousel' => $main_carousel->all(), 'advertising_one' => $advertising->first(), 'advertising_two' => $advertising_two->first(), 'advertising_three' => $advertising_three->first(),'reviews' => $reviews->orderBy('id','desc')->get(), 'advertising_count' => $advertising_count, 'advertising_two_count' => $advertising_two_count, 'advertising_three_count' => $advertising_three_count, 'tovar' => $tovar]);
     }
 
     public function FAQ(){
@@ -34,10 +35,14 @@ class MainController extends Controller
     public function about(){
         return view('about');
     }
-    public function product($id)
-    {
-        $Product_Model = ProductModel::find($id)->first();
+
+    public function product($id){
+        $Product_Model = ProductModel::find($id);
         $Product_Model_count = ProductModel::count();
         return view('product', ['Product_Model' => $Product_Model, 'Product_Model_count'=>$Product_Model_count]);
+    }
+
+    public function basket(){
+        return view('basket');
     }
 }
