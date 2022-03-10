@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\MainCarousel;
 use App\Models\ProductModel;
 use App\Models\MainFaq;
+use App\Models\PayMethod;
 use App\Models\CategoryModel;
-
+use App\Models\icons;
+use App\Models\PunktsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
 use App\Models\AdvertisingTwo;
 use App\Models\AdvertisingThree;
+use App\Models\HotLine;
+
+use Illuminate\Support\Facades\Route;
 
 class AdminController extends Controller
 {
@@ -20,15 +25,15 @@ class AdminController extends Controller
     }
 
     public function category(){
-
         $reviews = new CategoryModel();
-        return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get()]);
+        $punkts = new PunktsModel();
+        return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get(), 'punkts' => $punkts->all()]);
     }
 
     public function category_process(Request $data){
 
         $valid = $data->validate([
-        'name' => ['required', 'min:5', 'max:15', 'string']
+        'name' => ['required', 'min:3', 'max:15', 'string']
          ]);
 
         $review = new CategoryModel();
@@ -41,7 +46,7 @@ class AdminController extends Controller
     public function edit_category_process($id, Request $data)
     {
         $valid = $data->validate([
-        'name' => ['required', 'min:5', 'max:15', 'string']
+            'name' => ['required', 'min:3', 'max:15', 'string']
         ]);
 
         $review = CategoryModel::find($id);
@@ -60,6 +65,38 @@ class AdminController extends Controller
     public function main_carousel(){
         $main_carousel = new MainCarousel;
         return view('admin.main_carousel', ['main_carousel' => $main_carousel->all()]);
+    }
+
+    public function addpunkt($id, Request $data){
+        $valid = $data->validate([
+            'name' => ['required', 'min:3', 'max:25', 'string']
+        ]);
+
+        $punkt = new PunktsModel();
+        $punkt->categories = $id;   
+        $punkt->name = $data->input('name');
+        $punkt->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function edit_punkt($id, Request $data)
+    {
+        $valid = $data->validate([
+            'name' => ['required', 'min:3', 'max:15', 'string']
+        ]);
+
+        $punkt = PunktsModel::find($id);
+        $punkt->name = $data->input('name');
+        $punkt->save();
+
+        return redirect()->route('a_category');
+    }
+
+    public function delete_punkt($id)
+    {
+        PunktsModel::find($id)->delete();
+        return redirect()->route('a_category');
     }
 
     public function add_carousel(Request $data){
@@ -129,7 +166,9 @@ class AdminController extends Controller
 
     public function main_tovar(){
         $tovar = new ProductModel();
-        return view('admin.main_tovar', ['tovar' => $tovar->all()]);
+        $category = new CategoryModel();
+        $punkts = new PunktsModel();
+        return view('admin.main_tovar', ['tovar' => $tovar->all(), 'category' => $category->all(), 'punkts' => $punkts->all()]);
     }
 
     public function add_tovar(Request $data){
@@ -139,6 +178,8 @@ class AdminController extends Controller
             'tags' => ['required'],
             'price' => ['required'],
             'description' => ['required'],
+            'category' => ['required'],
+            'remains' => ['required'],
         ]); 
 
         $file = $data->file('img');
@@ -153,6 +194,8 @@ class AdminController extends Controller
         $product->price = $data->input('price');
         $product->old_price = '';
         $product->description = $data->input('description');
+        $product->remains = $data->input('remains');
+        $product->category = $data->input('category');
         $product->status = 0;
         $product->save();
 
@@ -201,12 +244,27 @@ class AdminController extends Controller
         return redirect()->route('main_tovar');
     }
 
+    public function approve($id){
+        $tovar = ProductModel::find($id);
+        $tovar->status = 1;
+        $tovar->save();
+        return redirect()->route('main_tovar');
+    }
+    
+    public function approve_all(){
+        $tovar = ProductModel::where('status', '=', 0)->get();
+        foreach($tovar as $item) {
+            $item->status = 1;
+            $item->save();
+        }
+        return redirect()->route('main_tovar');
+    }
 
     public function details_product($id){
         $tovar = ProductModel::find($id);
         return view('admin.details_product', ['tovar' => $tovar]);
     }   
-    ///
+
     public function main_faq(){
         $main_faq = new MainFaq();
         return view('admin.main_faq', ['main_faq' => $main_faq->all()]);
@@ -244,13 +302,11 @@ class AdminController extends Controller
         return redirect()->route('main_faq');
     }
 
-    ////
+    
     public function banner_servis(){
         return view ('admin.banner_servis');
     }
 
-
-// реклама ниже navbar start
     public function advertising_one(){
         $advertising = new advertising;
         return view ('admin.advertising_one' , ['advertising' => $advertising->all()]);
@@ -282,6 +338,7 @@ class AdminController extends Controller
         $advertising->save();
         return redirect()->route('advertising_one');
     }
+
     public function exit_advertising(Request $data, $id){
         $valid = $data->validate([
             'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
@@ -317,14 +374,11 @@ class AdminController extends Controller
         return redirect()->route('advertising_one');
     }
 
-// реклама ниже navbar end
-
-
-// реклама выше footer start
     public function advertising_two(){
         $advertising = new AdvertisingTwo;
         return view ('admin.advertising_two' , ['advertising' => $advertising->all()]);
     }
+
     public function add_advertising_two(Request $data){
         $valid = $data->validate([
             'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
@@ -349,6 +403,7 @@ class AdminController extends Controller
         $advertising->save();
         return redirect()->route('advertising_two');
     }
+
     public function exit_advertisingTwo(Request $data, $id){
         $valid = $data->validate([
             'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
@@ -379,73 +434,211 @@ class AdminController extends Controller
 
         return redirect()->route('advertising_two');
     }
+
     public function delete_advertisingTwo($id){
         AdvertisingTwo::find($id)->delete();
         return redirect()->route('advertising_two');
     }
 
-// реклама выше footer end
+    public function advertising_three(){
+        $advertising = new AdvertisingThree();
+        return view ('admin.advertising_three' , ['advertising' => $advertising->all()]);
+    }  
+    public function add_advertising_three(Request $data){
+        $valid = $data->validate([
+            'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'price' => ['required'],
+            'link' => ['required']
+        ]); 
 
-public function advertising_three(){
-    $advertising = new AdvertisingThree();
-    return view ('admin.advertising_three' , ['advertising' => $advertising->all()]);
+        $file = $data->file('img');
+        $upload_folder = 'public/advertising_three/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+
+        $advertising = new AdvertisingThree();
+        $advertising->img = $filename;
+        $advertising->title = $data->input('title');
+        $advertising->description = $data->input('description');
+        $advertising->price = $data->input('price');
+        $advertising->link = $data->input('link');
+        $advertising->status = 0;
+        $advertising->save();
+        return redirect()->route('advertising_three');
+    }
+
+    public function exit_advertisingThree(Request $data, $id){
+        $valid = $data->validate([
+            'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'price' => ['required'],
+            'link' => ['required']
+        ]); 
+        
+        $advertising = AdvertisingThree::find($id);
+        if($data->file('img') != '') {
+            $upload_folder = 'public/advertising_three/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $advertising->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $advertising->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $advertising->img = $advertising->img;
+        }
+        
+        $advertising->title = $data->input('title');
+        $advertising->description = $data->input('description');
+        $advertising->price = $data->input('price');
+        $advertising->link = $data->input('link');
+        $advertising->save();
+
+        return redirect()->route('advertising_three');
+    }  
+
+
+    public function delete_advertisingThree($id){
+        AdvertisingThree::find($id)->delete();
+        return redirect()->route('advertising_three');
+    }
+public function icons(){
+    $icons = new icons();
+    return view ('admin.icons' , ['icons' => $icons->all()]);
 }
-public function add_advertising_three(Request $data){
+public function add_icons(Request $data){
     $valid = $data->validate([
         'img' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
-        'title' => ['required'],
-        'description' => ['required'],
-        'price' => ['required'],
         'link' => ['required']
-     ]); 
+     ]);
 
     $file = $data->file('img');
-    $upload_folder = 'public/advertising_three/'; //Создается автоматически
+    $upload_folder = 'public/icons/'; //Создается автоматически
     $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
     Storage::putFileAs($upload_folder, $file, $filename); 
 
-    $advertising = new AdvertisingThree();
-    $advertising->img = $filename;
-    $advertising->title = $data->input('title');
-    $advertising->description = $data->input('description');
-    $advertising->price = $data->input('price');
-    $advertising->link = $data->input('link');
-    $advertising->status = 0;
-    $advertising->save();
-    return redirect()->route('advertising_three');
+    $icons = new icons();
+    $icons->img = $filename;
+    $icons->link = $data->input('link');
+    $icons->save();
+    return redirect()->route('icons');
 }
-public function exit_advertisingThree(Request $data, $id){
+public function exit_icons($id, Request $data){
+
     $valid = $data->validate([
         'img' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
-        'title' => ['required'],
-        'description' => ['required'],
-        'price' => ['required'],
         'link' => ['required']
     ]); 
     
-    $advertising = AdvertisingThree::find($id);
-    if($data->file('img') != '') {
-        $upload_folder = 'public/advertising_three/'; //Создается автоматически
-        $file = $data->file('img');
-        $filename = $file->getClientOriginalName();
-        Storage::delete($upload_folder . '/' . $advertising->img);
-        Storage::putFileAs($upload_folder, $file, $filename);    
-        $advertising->img = $filename;
-        Storage::putFileAs($upload_folder, $file, $filename); 
-    } else {
-        $advertising->img = $advertising->img;
-    }
-    
-    $advertising->title = $data->input('title');
-    $advertising->description = $data->input('description');
-    $advertising->price = $data->input('price');
-    $advertising->link = $data->input('link');
-    $advertising->save();
+    $icons = icons::find($id);
 
-    return redirect()->route('advertising_three');
-}  
-public function delete_advertisingThree($id){
-    AdvertisingThree::find($id)->delete();
-    return redirect()->route('advertising_three');
-}
+        if($data->file('img') != '') {
+            $upload_folder = 'public/icons/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $icons->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $icons->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $icons->img = $icons->img;
+        }
+
+        $icons->link = $data->input('link');
+        $icons->save();
+
+        return redirect()->route('icons');
+    }
+
+    public function delete_icons($id){
+        icons::find($id)->delete();
+        return redirect()->route('icons');
+    }
+    public function hot_line(){
+        $hot_line = new HotLine();
+        return view ('admin.hot_line' , ['hot_line' => $hot_line->all()]);
+    }
+
+    public function hot_line_process(Request $data){
+        $valid = $data->validate([
+            'tel' => ['required'],
+            'description' => ['required'],
+        ]); 
+        $hot_line = new HotLine();
+        $hot_line->tel = $data->input('tel');
+        $hot_line->description = $data->input('description');
+        $hot_line->save();
+        return redirect()->route('hot_line');
+    }
+
+    public function exit_hot_line(Request $data, $id){
+        $valid = $data->validate([
+            'tel' => ['required'],
+            'description' => ['required']
+        ]); 
+        
+        $hot_line = HotLine::find($id);
+        $hot_line->tel = $data->input('tel');
+        $hot_line->description = $data->input('description');
+        $hot_line->save();
+
+        return redirect()->route('hot_line');
+    } 
+
+    public function delete_hot_line($id){
+        HotLine::find($id)->delete();
+        return redirect()->route('hot_line');
+    }
+    public function method_pay(){
+        $method_pay = new PayMethod();
+        return view ('admin.method_pay' , ['method_pay' => $method_pay->all()]);
+    }
+
+    public function method_pay_process(Request $data){
+        $valid = $data->validate([
+            'img' => ['required'],
+            'title' => ['required'],
+        ]); 
+        $file = $data->file('img');
+        $upload_folder = 'public/method_pay/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+        $method_pay = new PayMethod();
+        $method_pay->img = $filename;
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+        return redirect()->route('method_pay');
+        
+    }
+
+    public function exit_method_pay(Request $data, $id){
+        $valid = $data->validate([
+            'title' => ['required'],
+        ]); 
+
+        $method_pay = PayMethod::find($id);
+        if($data->file('img') != '') {
+            $upload_folder = 'public/method_pay/'; //Создается автоматически
+            $file = $data->file('img');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $method_pay->img);
+            Storage::putFileAs($upload_folder, $file, $filename);    
+            $method_pay->img = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $method_pay->img = $method_pay->img;
+        }
+        $method_pay->title = $data->input('title');
+        $method_pay->save();
+
+        return redirect()->route('method_pay');
+    } 
+
+    public function delete_method_pay($id){
+        PayMethod::find($id)->delete();
+        return redirect()->route('method_pay');
+    }
 }

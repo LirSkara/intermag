@@ -246,4 +246,25 @@
     -webkit-box-shadow: 0px 4px 4px #0000000f;
     box-shadow: 0px 4px 4px #0000000f;
 }
+
+.border-bottom-custom {
+    border-bottom: 2px solid;
+    border-radius: 0px;
+    border-bottom-color: #0167f3;
+}
+
+.btn:focus,
+.btn:active,
+.btn:hover {
+    outline: none;
+    box-shadow: none;
+}
 /* Конец карточек товаров */
+
+/* Начало категорий */
+.punkt-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #081828;
+}
+/* Конец категорий */
