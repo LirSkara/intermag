@@ -30,6 +30,7 @@ return array(
     'App\\Models\\PayMethod' => $baseDir . '/app/Models/PayMethod.php',
     'App\\Models\\ProductModel' => $baseDir . '/app/Models/ProductModel.php',
     'App\\Models\\PunktsModel' => $baseDir . '/app/Models/PunktsModel.php',
+    'App\\Models\\ServiseModel' => $baseDir . '/app/Models/ServiseModel.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\advertising' => $baseDir . '/app/Models/advertising.php',
     'App\\Models\\icons' => $baseDir . '/app/Models/icons.php',

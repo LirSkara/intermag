@@ -171,53 +171,24 @@
     </div>
 </section>
 <!-- End Banner Area -->
-<!-- Start Shipping Info -->
-<section class="shipping-info">
-    <div class="container">
-        <ul>
-            <!-- Free Shipping -->
-            <li>
-                <div class="media-icon">
-                    <i class="lni lni-delivery"></i>
-                </div>
-                <div class="media-body">
-                    <h5>бесплатная доставка</h5>
-                    <span>При заказе свыше 99 долларов</span>
-                </div>
-            </li>
-            <!-- Money Return -->
-            <li>
-                <div class="media-icon">
-                    <i class="lni lni-support"></i>
-                </div>
-                <div class="media-body">
-                    <h5>Поддержка 24/7.</h5>
-                    <span>Чат Или Звонок.</span>
-                </div>
-            </li>
-            <!-- Support 24/7 -->
-            <li>
-                <div class="media-icon">
-                    <i class="lni lni-credit-cards"></i>
-                </div>
-                <div class="media-body">
-                    <h5>Онлайн-оплата.</h5>
-                    <span>Безопасные Платежные Сервисы.</span>
-                </div>
-            </li>
-            <!-- Safe Payment -->
-            <li>
-                <div class="media-icon">
-                    <i class="lni lni-reload"></i>
-                </div>
-                <div class="media-body">
-                    <h5>Легкое Возвращение.</h5>
-                    <span>Беспроблемный Шопинг.</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
-<!-- End Shipping Info -->
-
+    <!-- Start Shipping Info -->
+    <section class="shipping-info">
+        <div class="container">
+            <ul>
+                <!-- Free Shipping -->
+                @foreach($servises as $servise)
+                <li>
+                    <div class="media-icon">
+                        <img src="/storage/servise/{{$servise->imgservise}}" alt="Загрузка фото">
+                    </div>
+                    <div class="media-body">
+                        <h5>{{$servise->sloganservise}}</h5>
+                        <span>{{$servise->descriptionservise}}</span>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
+        </div>
+    </section>
+    <!-- End Shipping Info -->
 @endsection
