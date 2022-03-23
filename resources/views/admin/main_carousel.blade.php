@@ -41,68 +41,68 @@
                     </div>
                 </div><!-- End Sales Card -->
 
-                <!-- Modal Edit Carousel -->
-                <div class="modal fade" id="editcarousel{{$carousel->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                        <div class="modal-header d-flex border-0">
-                            <h3 class="modal-title ms-auto" id="exampleModalLabel">Редактирование карточки</h3>
-                            <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="/edit_carousel/{{$carousel->id}}" method="POST" enctype="multipart/form-data">
-                            @csrf
-                                <div>
-                                    <label>Выберите фото</label>
-                                    <input type="file" name="foto" class="form-control mt-1">
-                                    @if($errors->has('foto'))
-                                        {{$errors->first('foto')}}
-                                    @endif
-                                </div>
+                    <!-- Modal Edit Carousel -->
+                    <div class="modal fade" id="editcarousel{{$carousel->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header d-flex border-0">
+                                <h3 class="modal-title ms-auto" id="exampleModalLabel">Редактирование карточки</h3>
+                                <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/edit_carousel/{{$carousel->id}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                    <div>
+                                        <label>Выберите фото</label>
+                                        <input type="file" name="foto" class="form-control mt-1">
+                                        @if($errors->has('foto'))
+                                            {{$errors->first('foto')}}
+                                        @endif
+                                    </div>
 
-                                <div class="form-floating mt-2">
-                                    <input type="text" name="name_cart" value="{{$carousel->name_cart}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Название карточки</label>
-                                    @if($errors->has('name_cart'))
-                                        {{$errors->first('name_cart')}}
-                                    @endif
-                                </div>
+                                    <div class="form-floating mt-2">
+                                        <input type="text" name="name_cart" value="{{$carousel->name_cart}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Название карточки</label>
+                                        @if($errors->has('name_cart'))
+                                            {{$errors->first('name_cart')}}
+                                        @endif
+                                    </div>
 
-                                <div class="form-floating mt-2">
-                                    <input type="text" name="first_text" value="{{$carousel->first_text}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Первый текст</label>
-                                    @if($errors->has('first_text'))
-                                        {{$errors->first('first_text')}}
-                                    @endif
-                                </div>
+                                    <div class="form-floating mt-2">
+                                        <input type="text" name="first_text" value="{{$carousel->first_text}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Первый текст</label>
+                                        @if($errors->has('first_text'))
+                                            {{$errors->first('first_text')}}
+                                        @endif
+                                    </div>
 
-                                <div class="form-floating mt-2">
-                                    <input type="text" name="description" value="{{$carousel->description}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Описание</label>
-                                    @if($errors->has('description'))
-                                        {{$errors->first('description')}}
-                                    @endif
-                                </div>
+                                    <div class="form-floating mt-2">
+                                        <input type="text" name="description" value="{{$carousel->description}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Описание</label>
+                                        @if($errors->has('description'))
+                                            {{$errors->first('description')}}
+                                        @endif
+                                    </div>
 
-                                <div class="form-floating mt-2">
-                                    <input type="text" name="text_price" value="{{$carousel->text_price}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Текст цены</label>
-                                    @if($errors->has('text_price'))
-                                        {{$errors->first('text_price')}}
-                                    @endif
-                                </div>
+                                    <div class="form-floating mt-2">
+                                        <input type="text" name="text_price" value="{{$carousel->text_price}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Текст цены</label>
+                                        @if($errors->has('text_price'))
+                                            {{$errors->first('text_price')}}
+                                        @endif
+                                    </div>
 
-                                <div class="form-floating mt-2">
-                                    <input type="text" name="price" value="{{$carousel->price}}"  class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Цена</label>
-                                    @if($errors->has('price'))
-                                        {{$errors->first('price')}}
-                                    @endif
-                                </div>
+                                    <div class="form-floating mt-2">
+                                        <input type="text" name="price" value="{{$carousel->price}}"  class="form-control" id="floatingInput" placeholder="name@example.com">
+                                        <label for="floatingInput">Цена</label>
+                                        @if($errors->has('price'))
+                                            {{$errors->first('price')}}
+                                        @endif
+                                    </div>
 
-                                <button class="btn btn-lg btn-carousel mt-2 w-100">Сохранить</button>
-                            </form>
-                        </div>
+                                    <button class="btn btn-lg btn-carousel mt-2 w-100">Сохранить</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

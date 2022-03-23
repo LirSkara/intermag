@@ -43,7 +43,7 @@
                                         <button class="btn py-0"  data-bs-toggle="modal" data-bs-target="#deletepunkt{{$punkt->id}}"><i class="bi bi-trash3 text-danger"></i></button>
                                     </div>
 
-                                     <!-- Modal Edit Category -->
+                                    <!-- Modal Edit punkt -->
                                     <div class="modal fade" id="editpunkt{{$punkt->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered">
                                             <div class="modal-content">
@@ -67,7 +67,7 @@
                                         </div>
                                     </div>
 
-                                     <!-- Modal delete punkt -->
+                                    <!-- Modal delete punkt -->
                                     <div class="modal fade" id="deletepunkt{{$punkt->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" style="width: 400px;">
                                             <div class="modal-content">
