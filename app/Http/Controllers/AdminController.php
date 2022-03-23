@@ -9,6 +9,7 @@ use App\Models\PayMethod;
 use App\Models\CategoryModel;
 use App\Models\icons;
 use App\Models\PunktsModel;
+use App\Models\ServiseModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\advertising;
@@ -29,6 +30,73 @@ class AdminController extends Controller
         $punkts = new PunktsModel();
         return view('admin.category', ['reviews' => $reviews->orderBy('id','desc')->get(), 'punkts' => $punkts->all()]);
     }
+
+
+
+
+
+    public function servise(){
+        $servises = new ServiseModel();
+        $servises_count = ServiseModel::count();
+        return view('admin.servise', ['servises' => $servises->orderBy('id','desc')->get(), 'servises_count' => $servises_count]);
+    }
+
+    public function servise_process(Request $data){
+        $valid = $data->validate([
+            'imgservise' => ['required', 'image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'sloganservise' => ['required'],
+            'descriptionservise' => ['required']
+         ]); 
+
+        $file = $data->file('imgservise');
+        $upload_folder = 'public/servise/'; //Создается автоматически
+        $filename = $file->getClientOriginalName(); //Сохраняем исходное название изображения
+        Storage::putFileAs($upload_folder, $file, $filename); 
+
+        $servise = new ServiseModel();
+        $servise->imgservise = $filename;
+        $servise->sloganservise = $data->input('sloganservise');
+        $servise->descriptionservise = $data->input('descriptionservise');
+        $servise->save();
+
+        return redirect()->route('a_servise');
+    }
+
+     public function edit_servise_process(Request $data, $id){
+        $valid = $data->validate([
+            'imgservise' => ['image', 'mimetypes:image/jpeg,image/png,image/webp'],
+            'sloganservise' => ['required'],
+            'descriptionservise' => ['required']
+        ]); 
+        
+        $servise = ServiseModel::find($id);
+        if($data->file('imgservise') != '') {
+            $upload_folder = 'public/servise/'; //Создается автоматически
+            $file = $data->file('imgservise');
+            $filename = $file->getClientOriginalName();
+            Storage::delete($upload_folder . '/' . $data->foto);
+            Storage::putFileAs($upload_folder, $file, $filename);
+            $servise->imgservise = $filename;
+            Storage::putFileAs($upload_folder, $file, $filename); 
+        } else {
+            $servise->imgservise = $servise->imgservise;
+        }
+        
+        $servise->sloganservise = $data->input('sloganservise');
+        $servise->descriptionservise = $data->input('descriptionservise');
+        $servise->save();
+
+        return redirect()->route('a_servise');
+    }
+
+    public function delete_servise_process($id){
+        ServiseModel::find($id)->delete();
+        return redirect()->route('a_servise');
+    }
+
+
+
+    
 
     public function category_process(Request $data){
 

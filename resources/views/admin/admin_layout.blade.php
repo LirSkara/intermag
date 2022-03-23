@@ -289,6 +289,11 @@
             </a>
           </li>
           <li>
+            <a href="/servise">
+              <i class="bi bi-circle"></i><span>Сервис</span>
+            </a>
+          </li>
+          <li>
             <a href="/main_tovar">
               <i class="bi bi-circle"></i><span>Товары</span>
             </a>

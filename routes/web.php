@@ -40,6 +40,13 @@ Route::post('/category', [AdminController::class, 'category_process']);
 Route::post('/edit_category/{id}', [AdminController::class, 'edit_category_process']);
 Route::get('/delete_category/{id}', [AdminController::class, 'delete_category_process']);
 
+Route::get('/servise', [AdminController::class, 'servise'])->name('a_servise');
+Route::post('/servise', [AdminController::class, 'servise_process']);
+Route::post('/edit_servise/{id}', [AdminController::class, 'edit_servise_process']);
+Route::get('/delete_servise/{id}', [AdminController::class, 'delete_servise_process']);
+
+
+
 Route::post('/addpunkt/{id}', [AdminController::class, 'addpunkt']);
 Route::post('/edit_punkt/{id}', [AdminController::class, 'edit_punkt']);
 Route::get('/delete_punkt/{id}', [AdminController::class, 'delete_punkt']);
